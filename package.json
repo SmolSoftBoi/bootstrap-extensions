@@ -1,0 +1,52 @@
+{
+  "name": "@smolpack/bootstrap-extensions",
+  "version": "1.0.0",
+  "description": "Bootstrap-powered user interface and behaviour framework.",
+  "repository": "https://github.com/SmolSoftBoi/bootstrap-extensions.git",
+  "author": "Kristian Matthews-Kennington <kristian@matthews-kennington.com>",
+  "sass": "scss/bootstrap-extension.scss",
+  "style": "dist/css/bootstrap-extension.css",
+  "scripts": {
+    "start": "npm-run-all watch",
+    "css": "npm-run-all css-compile css-prefix css-rtl css-minify",
+    "css-compile": "sass --style expanded --source-map --embed-sources --no-error-css --load-path node_modules scss/:dist/css/",
+    "css-rtl": "cross-env NODE_ENV=RTL postcss --config build/postcss.config.js --dir \"dist/css\" --ext \".rtl.css\" \"dist/css/*.css\" \"!dist/css/*.min.css\" \"!dist/css/*.rtl.css\"",
+    "css-lint": "npm-run-all --aggregate-output --continue-on-error --parallel css-lint-*",
+    "css-lint-stylelint": "stylelint \"**/*.{css,scss}\" --cache --cache-location .cache/.stylelintcache --rd",
+    "css-lint-vars": "fusv scss/",
+    "css-minify": "npm-run-all --aggregate-output --parallel css-minify-*",
+    "css-minify-main": "cleancss -O1 --format breakWith=lf --with-rebase --source-map --source-map-inline-sources --output dist/css/ --batch --batch-suffix \".min\" \"dist/css/*.css\" \"!dist/css/*.min.css\" \"!dist/css/*rtl*.css\"",
+    "css-minify-rtl": "cleancss -O1 --format breakWith=lf --with-rebase --source-map --source-map-inline-sources --output dist/css/ --batch --batch-suffix \".min\" \"dist/css/*rtl.css\" \"!dist/css/*.min.css\"",
+    "css-prefix": "npm-run-all --aggregate-output --parallel css-prefix-*",
+    "css-prefix-main": "postcss --config build/postcss.config.js --replace \"dist/css/*.css\" \"!dist/css/*.rtl*.css\" \"!dist/css/*.min.css\"",
+    "lint": "npm-run-all --aggregate-output --continue-on-error --parallel js-lint css-lint lockfile-lint",
+    "lockfile-lint": "lockfile-lint --allowed-hosts npm --allowed-schemes https: --empty-hostname false --type npm --path yarn-lock.json",
+    "release": "npm-run-all dist release-zip*",
+    "release-zip": "cross-env-shell \"rm -rf bootstrap-$npm_package_version-dist && cp -r dist/ bootstrap-$npm_package_version-dist && zip -r9 bootstrap-$npm_package_version-dist.zip bootstrap-$npm_package_version-dist && rm -rf bootstrap-$npm_package_version-dist\"",
+    "dist": "npm-run-all --aggregate-output --parallel css",
+    "test": "npm-run-all lint dist",
+    "watch": "npm-run-all --parallel watch-*",
+    "watch-css-main": "nodemon --watch scss/ --ext scss --exec \"npm-run-all css-lint css-compile css-prefix\"",
+    "watch-css-dist": "nodemon --watch dist/css/ --ext css --ignore \"dist/css/*.rtl.*\" --exec \"npm run css-rtl\""
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.12",
+    "bootstrap": "^5.0.0",
+    "clean-css-cli": "^5.6.1",
+    "cross-env": "^7.0.3",
+    "find-unused-sass-variables": "^4.0.4",
+    "lockfile-lint": "^4.9.5",
+    "nodemon": "^2.0.20",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.17",
+    "postcss-cli": "^10.0.0",
+    "rtlcss": "^4.0.0",
+    "sass": "^1.55.0",
+    "stylelint": "^14.13.0",
+    "stylelint-config-twbs-bootstrap": "^6.0.0"
+  },
+  "files": [
+    "dist/{css}/*.{css,map}",
+    "scss/**/*.scss"
+  ]
+}
