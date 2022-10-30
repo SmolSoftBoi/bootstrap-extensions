@@ -1,0 +1,23 @@
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "bootstrap/scss/functions";
+
+// 2. Include required Bootstrap stylesheets
+@import "bootstrap/scss/variables";
+
+// 3. Include any default variable overrides here
+@import "variables";
+
+// 4. Include remainder of required parts
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/vendor/rfs";
+@import "bootstrap/scss/root";
+
+// 5. Include Bootstrap parts
+@import "bootstrap/scss/utilities";
+@import "bootstrap/scss/containers";
+@import "bootstrap/scss/grid";
+
+
+// 7. Include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+@import "bootstrap/scss/utilities/api";

@@ -1,0 +1,25 @@
+// Variables
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+// Navbar
+$navbar-nav-active-font-weight: inherit !default;
+$navbar-border:                 transparent !default;
+
+$navbar-dark-bg:       $primary !default;
+$navbar-dark-brand-bg: $navbar-dark-bg !default;
+
+$navbar-transparent-color:        $white !default;
+$navbar-transparent-bg:           transparent !default;
+$navbar-transparent-border-color: transparent !default;
+
+$navbar-transparent-link-color:        $navbar-transparent-color !default;
+$navbar-transparent-link-hover-color:  shade-color($navbar-transparent-color, 10%) !default;
+$navbar-transparent-link-hover-bg:     transparent !default;
+$navbar-transparent-link-active-color: $navbar-transparent-link-hover-color !default;
+$navbar-transparent-link-active-bg:    transparent !default;
+
+$navbar-transparent-brand-color:       $navbar-transparent-color !default;
+$navbar-transparent-brand-hover-color: shade-color($navbar-transparent-color, 10%) !default;
+$navbar-transparent-brand-hover-bg:    transparent !default;
