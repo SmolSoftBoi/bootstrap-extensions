@@ -1,0 +1,14 @@
+{{ if eq hugo.Environment "production" -}}
+  <script src="/docs/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+{{ else -}}
+  <script src="/docs/dist/js/bootstrap.bundle.js"></script>
+{{- end }}
+
+{{ if eq .Page.Layout "docs" -}}
+<script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+{{- end }}
+
+{{- $vendor := resources.Match "js/vendor/*.js" -}}
+{{- $js := resources.Match "js/*.js" -}}
+{{- $targetDocsJSPath := "/docs/assets/js/docs.js" -}}
+<!--- $docsJs := append $js $vendor | resources.Concat $targetDocsJSPath --->

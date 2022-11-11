@@ -1,0 +1,11 @@
+// Buttons
+//
+// Custom buttons for the docs.
+
+.btn-bd-primary {
+  @extend .btn-primary;
+}
+
+.btn-bd-light {
+  @extend .btn-light;
+}

@@ -1,0 +1,41 @@
+// Featured List
+
+.featured-list {
+  padding: 0;
+  list-style: none;
+
+  li {
+    position: relative;
+    padding-left: $featured-list-li-padding-left;
+  }
+
+  .featured-list-icon-text {
+    font-size: $featured-list-font-size;
+  }
+}
+
+.featured-list-icon {
+  justify-content: space-around;
+  position: absolute;
+  top: 0;
+  left: $spacer * .6;
+  display: flex;
+  width: $featured-list-icon-width;
+  font-size: $featured-list-icon-font-size;
+  line-height: 0;
+  text-align: center;
+}
+
+.featured-list-bordered {
+  li {
+    position: relative;
+    padding-left: $featured-list-li-padding-left * 1.4;
+  }
+
+  .featured-list-icon {
+    width: $featured-list-icon-width * 1.3;
+    height: $featured-list-icon-width * 1.3;
+    border: $featured-list-border-width solid $featured-list-border-color;
+    border-radius: 50%;
+  }
+}

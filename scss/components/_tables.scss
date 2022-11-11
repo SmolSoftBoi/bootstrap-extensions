@@ -1,0 +1,46 @@
+// Tables
+
+.table {
+  .header {
+    padding-right: $table-header-padding-right;
+    font-weight: $table-header-font-weight;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+
+// Table Flex
+.table-flex {
+  display: table;
+  width: 100%;
+}
+
+.table-flex-item {
+  display: table-cell;
+  width: 1%;
+  white-space: nowrap;
+  vertical-align: middle;
+
+  .btn-group {
+    margin-left: $table-flex-btn-group-margin-left;
+  }
+}
+
+.table-flex-primary {
+  width: 99%;
+}
+
+.table-full {
+  @include media-breakpoint-up(sm) {
+    margin-right: div($grid-gutter-width, -2) - 1;
+    margin-left: div($grid-gutter-width, -2) - 1;
+  }
+}
+
+// Table Actions
+.table-actions {
+  padding-bottom: $table-actions-padding-bottom;
+}

@@ -1,0 +1,100 @@
+//
+// Docs examples
+//
+
+.bd-example-snippet {
+  border: $border-style $border-color;
+  border-width: $border-width 0;
+
+  @include media-breakpoint-up(md) {
+    border-width: $border-width;
+  }
+}
+
+.bd-example {
+  max-width: 100%;
+
+  &.bd-example-blocks {
+    > .block-fill-height {
+      height: 50vh;
+    }
+  }
+
+  &.bd-example-padded {
+    padding: $spacer;
+  }
+
+  &.bd-example-reduce-height {
+    > * {
+      height: 50vh;
+    }
+  }
+
+  &.bd-example-static {
+    > * {
+      display: block;
+      position: static;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    @include border-top-radius(var(--bs-border-radius));
+
+    &.bd-example-bg {
+      > * {
+        @include border-top-radius(var(--bs-border-radius));
+      }
+    }
+
+    &.bd-example-blocks {
+      > .block {
+        @include border-top-radius(var(--bs-border-radius));
+
+        > .block-background {
+          @include border-top-radius(var(--bs-border-radius));
+        }
+      }
+    }
+  }
+}
+
+//
+// Code snippets
+//
+
+.highlight {
+  padding: $spacer;
+  margin-bottom: $spacer;
+  background: $mark-bg;
+  @include border-radius($border-radius);
+
+  pre {
+    margin-top: $spacer * .5;
+    margin-bottom: $spacer * .5;
+    white-space: pre;
+  }
+
+  pre code {
+    word-wrap: normal;
+  }
+}
+
+.bd-code-snippet {
+  margin: 0 (-$grid-gutter-width * .5) $spacer;
+
+  .highlight {
+    margin-bottom: 0;
+    @include border-top-radius(0);
+  }
+
+  .bd-example {
+    margin: 0;
+    border: 0;
+  }
+
+  @include media-breakpoint-up(md) {
+    margin-right: 0;
+    margin-left: 0;
+    @include border-radius($border-radius);
+  }
+}

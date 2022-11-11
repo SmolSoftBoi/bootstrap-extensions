@@ -1,0 +1,125 @@
+// Nav
+
+
+// Nav Header
+.nav {
+  > .nav-header {
+    padding-right: $nav-header-padding-x;
+    padding-left: $nav-header-padding-x;
+    margin-bottom: $nav-header-margin-bottom;
+    font-size: 85%;
+    font-weight: 400;
+    color: $nav-header-color;
+    text-transform: $nav-header-text-transform;
+  }
+
+  > li {
+    + .nav-header {
+      margin-top: $nav-header-margin-top;
+    }
+  }
+}
+
+
+// Nav Toggler
+.nav-toggler {
+  display: block;
+  width: $nav-toggler-width;
+  padding: $nav-toggler-padding;
+  font-size: $nav-toggler-font-size;
+  color: $nav-toggler-color;
+  background: transparent;
+  border: $nav-toggler-border-width solid $nav-toggler-border-color;
+  border-radius: $nav-toggler-border-radius;
+
+  // Generate Lines
+  &::before {
+    display: block;
+    width: 100%;
+    padding-bottom: $spacer * .125;
+    content: "";
+    border-top: ($spacer * .375) double;
+    border-bottom: ($spacer * .125) solid;
+  }
+
+  &:hover,
+  &:focus {
+    color: $nav-toggler-hover-color;
+    background-color: $nav-toggler-color;
+  }
+
+  &-sm {
+    @include media-breakpoint-up(sm) {
+      display: none;
+    }
+  }
+
+  &-md {
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+  }
+
+  &-lg {
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
+  }
+
+  &-xl {
+    @include media-breakpoint-up(xl) {
+      display: none;
+    }
+  }
+}
+
+.nav-toggleable {
+  &-xs {
+    @include media-breakpoint-up(xs) {
+      display: block;
+      height: auto;
+    }
+  }
+
+  &-sm {
+    @include media-breakpoint-up(sm) {
+      display: block;
+      height: auto;
+    }
+  }
+
+  &-md {
+    @include media-breakpoint-up(md) {
+      display: block;
+      height: auto;
+    }
+  }
+}
+
+
+// Pills
+/* stylelint-disable-next-line selector-no-qualifying-type */
+.nav-pills > li.active > a {
+  &,
+  &:hover,
+  &:focus {
+    font-weight: $nav-pills-active-weight;
+  }
+}
+
+
+// Justified Variants
+.nav-fill {
+  .navbar-brand {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+}
+
+.nav-justified {
+  .navbar-brand {
+    flex-basis: 0;
+    flex-grow: 1;
+    text-align: center;
+  }
+}

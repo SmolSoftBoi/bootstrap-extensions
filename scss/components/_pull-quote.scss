@@ -1,0 +1,44 @@
+// Pull Quote
+.pull-quote {
+  padding: 0;
+  margin: 0 auto;
+  text-align: center;
+  border-left: 0;
+
+  > p {
+    margin-top: $pull-quote-margin-top;
+    font-size: $pull-quote-font-size-xs;
+  }
+
+  > img {
+    width: $pull-quote-img-width-xs;
+    height: $pull-quote-img-height-xs;
+  }
+
+  > cite {
+    display: block;
+    margin-top: $pull-quote-margin-top;
+    font-size: $pull-quote-cite-font-size-xs;
+    font-style: normal;
+    color: $pull-quote-cite-color;
+    text-transform: $pull-quote-cite-text-transform;
+  }
+
+  @include media-breakpoint-up(sm) {
+    max-width: 75%;
+
+    > cite {
+      font-size: $pull-quote-cite-font-size;
+    }
+
+    > img {
+      width: $pull-quote-img-width;
+      height: $pull-quote-img-height;
+    }
+
+    > p {
+      font-size: $pull-quote-font-size;
+    }
+  }
+}
+

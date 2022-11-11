@@ -1,0 +1,99 @@
+// Nav Bordered
+
+
+// Underline Nav
+
+.nav-bordered {
+  > .nav-item {
+    float: left;
+
+    // Pill Links
+    > .nav-link {
+      display: inline-block;
+      padding: ($spacer * .5) 0;
+      font-weight: $nav-bordered-font-weight;
+      color: $nav-bordered-color;
+      border-bottom: $nav-bordered-border-width solid transparent;
+
+      &:hover,
+      &:focus {
+        color: $nav-bordered-color-active;
+        background-color: transparent;
+      }
+
+      // Active State
+      &.active {
+        &,
+        &:hover,
+        &:focus {
+          font-weight: $nav-bordered-font-weight-active;
+          color: $nav-bordered-color-active;
+          border-bottom-color: $nav-bordered-color-active;
+        }
+      }
+    }
+
+    + .nav-item {
+      margin-left: ($spacer * 1.5);
+    }
+  }
+
+  &.nav-justified {
+    > .nav-item {
+      + .nav-item {
+        margin-left: 0;
+      }
+
+      > .nav-link {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &.nav-stacked {
+    > .nav-item {
+      float: none;
+      margin-left: 0;
+
+      + .nav-item {
+        margin-top: 0;
+      }
+
+      > .nav-link {
+        display: block;
+        padding: ($spacer * .3) ($spacer * .6) ($spacer * .3) ($spacer * 1.5);
+        border-bottom: 0;
+        border-left: $nav-bordered-border-width solid transparent;
+
+        &:hover,
+        &:focus {
+          text-decoration: none;
+          border-left: $nav-bordered-border-width solid;
+        }
+
+        /* stylelint-disable selector-max-class */
+        &.active {
+          &,
+          &:hover,
+          &:focus {
+            border-left-color: $nav-bordered-color-active;
+          }
+        }
+        /* stylelint-enable */
+      }
+    }
+
+    .nav-header {
+      padding-left: $spacer * 1.7;
+    }
+
+    .nav-divider {
+      height: 0;
+      margin-top: $nav-bordered-divider-margin-top;
+      margin-bottom: $nav-bordered-divider-margin-bottom;
+      margin-left: $spacer * 1.7;
+      overflow: hidden;
+      border-top: 1px solid $nav-bordered-divider-color;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+// Table Sorter
+
+.header-sort-up,
+.header-sort-down {
+  font-weight: $table-sorter-header-sort-font-weight;
+  color: $table-sorter-header-sort-color;
+  white-space: nowrap;
+  cursor: pointer;
+  border-bottom-color: $table-sorter-header-sort-border-bottom-color;
+
+  &::after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-right: $table-sorter-header-sort-margin-right;
+    margin-bottom: $table-sorter-header-sort-margin-bottom;
+    margin-left: $table-sorter-header-sort-margin-left;
+    content: "";
+    border-right: $table-sorter-header-sort-border-width solid transparent;
+    border-left: $table-sorter-header-sort-border-width solid transparent;
+  }
+}
+
+.header-sort-up {
+  &::after {
+    border-top: $table-sorter-header-sort-border-width solid;
+  }
+}
+
+.header-sort-down {
+  border-bottom: $table-sorter-header-sort-border-width solid;
+}

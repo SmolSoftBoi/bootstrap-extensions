@@ -1,0 +1,104 @@
+// Type
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+}
+
+// Inherit Helper
+.text-inherit {
+  &,
+  &:hover,
+  &:focus {
+    color: inherit;
+    text-decoration: inherit;
+  }
+}
+
+// Responsive Helpers
+.text-xs-left   {
+  text-align: left;
+}
+
+.text-xs-right {
+  text-align: right;
+}
+
+.text-xs-center {
+  text-align: center;
+}
+
+@include media-breakpoint-up(sm) {
+  .text-sm-left {
+    text-align: left;
+  }
+
+  .text-sm-right {
+    text-align: right;
+  }
+
+  .text-sm-center {
+    text-align: center;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .text-md-left {
+    text-align: left;
+  }
+
+  .text-md-right {
+    text-align: right;
+  }
+
+  .text-md-center {
+    text-align: center;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .text-lg-left {
+    text-align: left;
+  }
+
+  .text-lg-right {
+    text-align: right;
+  }
+
+  .text-lg-center {
+    text-align: center;
+  }
+}
+
+// Lead Override
+.lead {
+  font-size: $lead-font-size-xs;
+  font-weight: $lead-font-weight;
+  line-height: $lead-line-height;
+  letter-spacing: $lead-letter-spacing;
+
+  @include media-breakpoint-up(sm) {
+    font-size: $lead-font-size;
+  }
+}
+
+
+// Lists
+.list-spaced {
+  li {
+    margin-bottom: $list-spaced-padding-bottom;
+  }
+}
+
+.list-bordered {
+  li {
+    border-top: $list-bordered-border-width solid $list-bordered-border-color;
+
+    &:last-child {
+      border-bottom: $list-bordered-border-width solid $list-bordered-border-color;
+    }
+  }
+}

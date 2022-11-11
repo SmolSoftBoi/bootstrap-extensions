@@ -1,0 +1,21 @@
+// List Avatar
+
+.list-avatar {
+  padding: 0;
+  list-style: none;
+}
+
+.list-avatar-item {
+  display: inline-block;
+  width: $list-avatar-item-width;
+  margin-right: $list-avatar-item-margin-right;
+  vertical-align: top;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  img {
+    width: 100%;
+  }
+}

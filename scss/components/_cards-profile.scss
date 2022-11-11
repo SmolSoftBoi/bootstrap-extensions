@@ -1,0 +1,36 @@
+// Cards Profile
+
+.card-profile {
+  .card-title {
+    margin-bottom: $card-profile-title-margin-bottom;
+  }
+
+  .card-header {
+    height: $card-profile-header-height;
+    background-size: cover;
+  }
+}
+
+.card-profile-img {
+  max-width: $card-profile-img-width;
+  margin-top: $card-profile-img-margin-top;
+  margin-bottom: $card-profile-img-margin-bottom;
+  border: $card-profile-img-border-width solid $card-profile-img-border-color;
+  border-radius: 100%;
+  box-shadow: $card-profile-img-box-shadow;
+}
+
+.card-menu {
+  padding: 0;
+  list-style: none;
+}
+
+.card-menu-item {
+  display: inline-block;
+  padding: 0 $card-menu-item-padding-x;
+  border-right: $card-menu-item-border-right-width solid $card-menu-item-border-right-color;
+
+  &:last-child {
+    border-right: 0;
+  }
+}

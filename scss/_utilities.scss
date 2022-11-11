@@ -1,0 +1,31 @@
+// Utilities
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "bg-blur": (
+      property: backdrop-filter,
+      class: bg-blur,
+      values: $utilities-blur
+    ),
+    "bg-saturate": (
+      property: backdrop-filter,
+      class: bg-saturate,
+      values: (
+        0: saturate(0%),
+        25: saturate(25%),
+        50: saturate(50%),
+        75: saturate(75%),
+        100: saturate(100%)
+      )
+    ),
+    "font-family": (
+      property: font-family,
+      class: font,
+      values: (
+        monospace: var(--#{$prefix}font-monospace),
+        serif: var(--#{$prefix}font-serif)
+      )
+    )
+  )
+);

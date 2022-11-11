@@ -7,34 +7,49 @@
   "sass": "scss/bootstrap-extension.scss",
   "style": "dist/css/bootstrap-extension.css",
   "scripts": {
-    "start": "npm-run-all watch",
+    "start": "npm-run-all watch docs-serve",
     "css": "npm-run-all css-compile css-prefix css-rtl css-minify",
     "css-compile": "sass --style expanded --source-map --embed-sources --no-error-css --load-path node_modules scss/:dist/css/",
     "css-rtl": "cross-env NODE_ENV=RTL postcss --config build/postcss.config.js --dir \"dist/css\" --ext \".rtl.css\" \"dist/css/*.css\" \"!dist/css/*.min.css\" \"!dist/css/*.rtl.css\"",
     "css-lint": "npm-run-all --aggregate-output --continue-on-error --parallel css-lint-*",
     "css-lint-stylelint": "stylelint \"**/*.{css,scss}\" --cache --cache-location .cache/.stylelintcache --rd",
-    "css-lint-vars": "fusv scss/",
+    "css-lint-vars": "fusv scss/ site/assets/scss/",
     "css-minify": "npm-run-all --aggregate-output --parallel css-minify-*",
     "css-minify-main": "cleancss -O1 --format breakWith=lf --with-rebase --source-map --source-map-inline-sources --output dist/css/ --batch --batch-suffix \".min\" \"dist/css/*.css\" \"!dist/css/*.min.css\" \"!dist/css/*rtl*.css\"",
     "css-minify-rtl": "cleancss -O1 --format breakWith=lf --with-rebase --source-map --source-map-inline-sources --output dist/css/ --batch --batch-suffix \".min\" \"dist/css/*rtl.css\" \"!dist/css/*.min.css\"",
     "css-prefix": "npm-run-all --aggregate-output --parallel css-prefix-*",
     "css-prefix-main": "postcss --config build/postcss.config.js --replace \"dist/css/*.css\" \"!dist/css/*.rtl*.css\" \"!dist/css/*.min.css\"",
-    "lint": "npm-run-all --aggregate-output --continue-on-error --parallel js-lint css-lint lockfile-lint",
-    "lockfile-lint": "lockfile-lint --allowed-hosts npm --allowed-schemes https: --empty-hostname false --type npm --path yarn-lock.json",
+    "lint": "npm-run-all --aggregate-output --continue-on-error --parallel css-lint lockfile-lint",
+    "docs": "npm-run-all docs-build docs-lint",
+    "docs-build": "hugo --cleanDestinationDir",
+    "docs-compile": "npm run docs-build",
+    "docs-vnu": "node build/vnu-jar.js",
+    "docs-lint": "npm run docs-vnu",
+    "docs-serve": "hugo server --port 9001 --disableFastRender",
+    "docs-serve-only": "npx sirv-cli _site --port 9001",
+    "lockfile-lint": "lockfile-lint --allowed-hosts yarn --allowed-schemes https: --empty-hostname false --type yarn --path yarn.lock",
     "release": "npm-run-all dist release-zip*",
     "release-zip": "cross-env-shell \"rm -rf bootstrap-$npm_package_version-dist && cp -r dist/ bootstrap-$npm_package_version-dist && zip -r9 bootstrap-$npm_package_version-dist.zip bootstrap-$npm_package_version-dist && rm -rf bootstrap-$npm_package_version-dist\"",
     "dist": "npm-run-all --aggregate-output --parallel css",
     "test": "npm-run-all lint dist",
     "watch": "npm-run-all --parallel watch-*",
     "watch-css-main": "nodemon --watch scss/ --ext scss --exec \"npm-run-all css-lint css-compile css-prefix\"",
-    "watch-css-dist": "nodemon --watch dist/css/ --ext css --ignore \"dist/css/*.rtl.*\" --exec \"npm run css-rtl\""
+    "watch-css-dist": "nodemon --watch dist/css/ --ext css --ignore \"dist/css/*.rtl.*\" --exec \"npm run css-rtl\"",
+    "watch-css-docs": "nodemon --watch site/assets/scss/ --ext scss --exec \"npm run css-lint\""
   },
   "devDependencies": {
     "autoprefixer": "^10.4.12",
-    "bootstrap": "^5.0.0",
+    "bootstrap": "^5.2.2",
     "clean-css-cli": "^5.6.1",
     "cross-env": "^7.0.3",
+    "eslint": "^8.24.0",
+    "eslint-config-xo": "^0.42.0",
+    "eslint-plugin-html": "^7.1.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-markdown": "^3.0.0",
+    "eslint-plugin-unicorn": "^44.0.0",
     "find-unused-sass-variables": "^4.0.4",
+    "hugo-bin": "^0.92.2",
     "lockfile-lint": "^4.9.5",
     "nodemon": "^2.0.20",
     "npm-run-all": "^4.1.5",
@@ -43,10 +58,14 @@
     "rtlcss": "^4.0.0",
     "sass": "^1.55.0",
     "stylelint": "^14.13.0",
-    "stylelint-config-twbs-bootstrap": "^6.0.0"
+    "stylelint-config-twbs-bootstrap": "^6.0.0",
+    "vnu-jar": "22.9.29"
   },
   "files": [
     "dist/{css}/*.{css,map}",
     "scss/**/*.scss"
-  ]
+  ],
+  "hugo-bin": {
+    "buildTags": "extended"
+  }
 }

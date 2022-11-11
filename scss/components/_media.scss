@@ -1,0 +1,13 @@
+// Media
+
+.media {
+  display: flex;
+}
+
+.media-body {
+  flex-grow: 1;
+}
+
+.media-object {
+  flex-shrink: 0;
+}

@@ -3,16 +3,114 @@
 // Variables should follow the `$component-state-property-size` formula for
 // consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
 
+// Include required Bootstrap stylesheets
+@import "bootstrap/scss/variables";
+
+
+// Color System
+$gray-subtle: $gray-200 !default;
+
+
+// Container
+
+// scss-docs-start container-variables
+$container-spacious-padding-x: ($grid-gutter-width * .5) * 2.7 !default;
+// scss-docs-end container-variables
+
+
+// Typography
+$font-family-serif: serif !default;
+
+$font-size-xs:        $font-size-sm * .9 !default;
+$lead-line-height:    1.6 !default;
+$lead-letter-spacing: 0 !default;
+
+$lead-font-size-xs: $lead-font-size * .9 !default;
+
+
+$list-spaced-padding-bottom: $spacer * .3 !default;
+$list-bordered-border-width: $border-width !default;
+$list-bordered-border-color: $gray-500 !default;
+
+$list-avatar-item-width:        $spacer * 2 !default;
+$list-avatar-item-margin-right: $list-avatar-item-width * .2 !default;
+
+
+// Z-index Master List
+$zindex-list-group-progress:    -1 !default;
+$zindex-statlist-progress:      -1 !default;
+$zindex-block-background-fixed: 0 !default;
+$zindex-block-background:       1 !default;
+$zindex-block-foreground:       2 !default;
+$zindex-hr-divider-content:     2 !default;
+$zindex-nav-icon-label:         5 !default;
+$zindex-block-border:           10 !default;
+$zindex-stage-toggle:           100 !default;
+$zindex-zoom:                   1080 !default;
+$zindex-growl:                  1090 !default;
+
+
+// Table
+
+// scss-docs-start table-variables
+$table-header-padding-right:                   $spacer * 1.3 !default;
+$table-header-font-weight:                     $font-weight-bold !default;
+
+$table-flex-btn-group-margin-left:             $spacer * .6 !default;
+
+$table-actions-padding-bottom:                 $spacer * .9 !default;
+// scss-docs-end table-variables
+
+$table-sorter-header-sort-font-weight:         $font-weight-bold !default;
+$table-sorter-header-sort-color:               $primary !default;
+$table-sorter-header-sort-border-bottom-color: $table-sorter-header-sort-color !default;
+$table-sorter-header-sort-margin-right:        -($spacer * .6) !default;
+$table-sorter-header-sort-margin-bottom:       $spacer * .1 !default;
+$table-sorter-header-sort-margin-left:         $spacer * .3 !default;
+$table-sorter-header-sort-border-width:        $border-width * 5 !default;
+
+
+// Buttons
+
+// scss-docs-start btn-variables
+$btn-text-transform:     none !default;
+$btn-letter-spacing:     normal !default;
+
+$btn-more-top:           1px !default;
+$btn-more-padding-left:  $spacer * .3 !default;
+
+$btn-pill-padding-x:     1.25rem !default;
+// scss-docs-end btn-variables
+
+
+// Forms
+
+// Input Icon
+
+// scss-docs-start input-icon-variables
+$input-icon-top:                  $spacer * .4 !default;
+$input-icon-left:                 $spacer * .6 !default;
+$input-icon-color:                $gray-400 !default;
+$input-icon-control-padding-left: $spacer * 1.9 !default;
+// scss-docs-end input-icon-variables
+
+
 // Navbar
+
+// scss-docs-start navbar-variables
 $navbar-nav-active-font-weight: inherit !default;
 $navbar-border:                 transparent !default;
 
-$navbar-dark-bg:       $primary !default;
-$navbar-dark-brand-bg: $navbar-dark-bg !default;
+$navbar-dark-bg:                $primary !default;
+$navbar-dark-brand-bg:          $navbar-dark-bg !default;
+// scss-docs-end navbar-variables
 
-$navbar-transparent-color:        $white !default;
-$navbar-transparent-bg:           transparent !default;
-$navbar-transparent-border-color: transparent !default;
+// Navbar Transparent
+
+// scss-docs-start navbar-transparent-variables
+$navbar-transparent-color:             $white !default;
+$navbar-transparent-bg:                transparent !default;
+$navbar-transparent-border-color:      transparent !default;
 
 $navbar-transparent-link-color:        $navbar-transparent-color !default;
 $navbar-transparent-link-hover-color:  shade-color($navbar-transparent-color, 10%) !default;
@@ -23,3 +121,490 @@ $navbar-transparent-link-active-bg:    transparent !default;
 $navbar-transparent-brand-color:       $navbar-transparent-color !default;
 $navbar-transparent-brand-hover-color: shade-color($navbar-transparent-color, 10%) !default;
 $navbar-transparent-brand-hover-bg:    transparent !default;
+// scss-docs-end navbar-transparent-variables
+
+
+// Modal
+
+// scss-docs-start modal-variables
+$modal-scroller-height:        $spacer * 32.3 !default;
+$modal-scroller-border-radius: $border-radius-lg !default;
+
+$modal-action-bg:              $gray-100 !default;
+// scss-docs-end modal-variables
+
+
+// Nav
+$nav-header-color:          $gray-500 !default;
+$nav-header-padding-x:      $spacer * .9 !default;
+$nav-header-margin-top:     $spacer * 1.3 !default;
+$nav-header-margin-bottom:  $spacer * .3 !default;
+$nav-header-text-transform: uppercase !default;
+
+$nav-tabs-active-link-hover-bg: $body-bg !default;
+
+$nav-toggler-width:         $spacer * 2.5 !default;
+$nav-toggler-padding:       $spacer * .6 !default;
+$nav-toggler-font-size:     $font-size-base !default;
+$nav-toggler-color:         $gray-700 !default;
+$nav-toggler-hover-color:   $white !default;
+$nav-toggler-border-width:  $border-width !default;
+$nav-toggler-border-color:  $gray-200 !default;
+$nav-toggler-border-radius: $border-radius !default;
+
+$nav-pills-active-weight: 500 !default;
+
+// Nav Bordered
+
+// scss-docs-start nav-bordered-variables
+$nav-bordered-color:                 $nav-link-color !default;
+$nav-bordered-color-active:          $primary !default;
+$nav-bordered-font-weight:           700 !default;
+$nav-bordered-font-weight-active:    700 !default;
+$nav-bordered-border-width:          $border-width * 4 !default;
+
+$nav-bordered-divider-color:         rgba($white, .2) !default;
+$nav-bordered-divider-margin-top:    $spacer * 1.3 !default;
+$nav-bordered-divider-margin-bottom: $spacer * 1.6 !default;
+// scss-docs-end nav-bordered-variables
+
+// Nav Icon
+// scss-docs-start nav-icon-variables
+$nav-icon-bg:                    $gray-subtle;
+$nav-icon-border-color:          $white;
+$nav-icon-margin-top:            0 !default;
+$nav-icon-margin-bottom:         0 !default;
+$nav-icon-margin-top-sm:         -($spacer * 1.3) !default;
+$nav-icon-margin-bottom-sm:      $spacer * 1.9 !default;
+$nav-icon-width:                 $spacer * 4.4 !default;
+$nav-icon-brand-color:           $gray-subtle !default;
+$nav-icon-brand-hover-color:     inherit !default;
+$nav-icon-brand-bg:              $primary !default;
+$nav-icon-brand-padding-y:       $spacer * 1.3 !default;
+$nav-icon-brand-padding-y-sm:    $nav-icon-brand-padding-y * .5 !default;
+$nav-icon-brand-font-size:       $font-size-base * 1.1 !default;
+$nav-icon-brand-icon-font-size:  $nav-icon-brand-font-size * 1.7 !default;
+$nav-icon-link-color:            inherit !default;
+$nav-icon-link-active-color:     $gray-700 !default;
+$nav-icon-link-active-bg:        $nav-icon-border-color !default;
+$nav-icon-link-border-width:     $border-width !default;
+$nav-icon-link-border-color:     $nav-icon-border-color !default;
+$nav-icon-link-img-width:        $spacer * 1.6 !default;
+$nav-icon-label-top:             $spacer * .5 !default;
+$nav-icon-label-right:           $spacer * .8 !default;
+$nav-icon-label-padding-x:       $spacer * .4 !default;
+$nav-icon-label-padding-y:       $spacer * .2 !default;
+$nav-icon-label-font-size:       $font-size-sm * .8 !default;
+$nav-icon-label-border-width:    $border-width * 2 !default;
+$nav-icon-label-border-radius:   $border-radius-lg * 2.1 !default;
+$nav-icon-nav-link-padding:      $spacer * .9 !default;
+$nav-icon-nav-link-padding-x-sm: $spacer * .8 !default;
+$nav-icon-nav-link-padding-y-sm: $spacer * .7 !default;
+$nav-icon-nav-link-font-size:    $font-size-base * 1.1 !default;
+// scss-docs-end nav-icon-variables
+
+
+// Cards Profile
+
+// scss-docs-start card-profile-variables
+$card-profile-title-margin-bottom: $spacer * .3 !default;
+$card-profile-header-height:       $spacer * 9.4 !default;
+
+$card-profile-img-width:           $spacer * 6.3 !default;
+$card-profile-img-margin-top:      -($card-profile-header-height * .5) !default;
+$card-profile-img-margin-bottom:   $spacer * .3 !default;
+$card-profile-img-border-width:    $border-width * 3 !default;
+$card-profile-img-border-color:    $white !default;
+$card-profile-img-box-shadow:      0 ($spacer * .1) ($spacer * .1) rgba($black, .1) !default;
+// scss-docs-end card-profile-variables
+
+$card-menu-item-padding-x:          $spacer * .6 !default;
+$card-menu-item-border-right-width: $border-width !default;
+$card-menu-item-border-right-color: $gray-200 !default;
+
+
+// Card Link List
+
+// scss-docs-start card-link-list-variables
+$card-link-list-margin-left: $spacer * .3 !default;
+// scss-docs-end card-link-list-variables
+
+
+// List Group
+
+// scss-docs-start list-group-variables
+$list-group-header-padding-x:     $spacer * 1.25 !default;
+$list-group-header-padding-y:     $spacer !default;
+$list-group-header-margin-bottom: $spacer * .1 !default;
+$list-group-header-color:         inherit !default;
+
+$list-group-progress-bg:          darken($body-bg, 3%);
+// scss-docs-end list-group-variables
+
+
+// Carousel Light
+
+// scss-docs-start carousel-light-variables
+$carousel-light-control-color:          rgba($black, .3);
+
+$carousel-light-indicator-color:        rgba($black, .3) !default;
+$carousel-light-indicator-color-active: $white !default;
+$carousel-light-indicator-border-color: $primary !default;
+// scss-docs-end carousel-light-variables
+
+
+// Media List Conversation
+// scss-docs-start media-list-conversation-variables
+$media-list-conversation-object-width:                 $spacer * 2.6 !default;
+$media-list-conversation-object-height:                $media-list-conversation-object-width !default;
+$media-list-conversation-object-margin-x:              $spacer * .3 !default;
+
+$media-list-conversation-body-text-padding-x:          $spacer * .9 !default;
+$media-list-conversation-body-text-padding-y:          $spacer * .6 !default;
+$media-list-conversation-body-text-bg:                 $gray-100 !default;
+$media-list-conversation-body-text-border-radius:      $border-radius-lg * 1.9 !default;
+
+$media-list-conversation-current-user-body-text-color: $white !default;
+$media-list-conversation-current-user-body-text-bg:    $primary !default;
+// scss-docs-end media-list-conversation-variables
+
+
+// Media List Stream
+
+// scss-docs-start media-list-stream-variables
+$media-list-stream-text-muted-font-wegiht:  $font-weight-bold !default;
+
+$media-list-stream-heading-margin-top:      $spacer * .3 !default;
+
+$media-list-stream-body-inline-top:         $spacer * 1.3 !default;
+$media-list-stream-body-inline-bottom:      $spacer * 1.6 !default;
+$media-list-stream-body-actions-margin-top: $spacer * .3 !default;
+
+$media-list-stream-object-width:            $spacer * 3.8 !default;
+$media-list-stream-object-width-sm:         $media-list-stream-object-width * .7 !default;
+$media-list-stream-object-margin-right:     $spacer * .3 !default;
+
+$media-list-stream-list-object-width:       $media-list-stream-object-width * .9 !default;
+// scss-docs-end media-list-stream-variables
+
+
+// Media List Users
+
+// scss-docs-start media-list-users-variables
+$media-list-users-margin-bottom: $spacer * .3 !default;
+
+$media-list-users-group-item-padding: $spacer * .9 !default;
+
+$media-list-users-object-width:        $spacer * 2.6 !default;
+$media-list-users-object-margin-right: $spacer * .3 !default;
+
+$media-list-users-body-secondary-color: $gray-500 !default;
+
+$media-list-users-btn-pull-right-margin-top: $spacer * .4 !default;
+// scss-docs-end media-list-users-variables
+
+
+// Block
+
+// scss-docs-start block-variables
+$block-color:                inherit !default;
+$block-bg:                   inherit !default;
+
+$block-padding-x:            $spacer * 3.8 !default;
+$block-padding-y:            $spacer * 1.9 !default;
+$block-transform:            rotate(-2deg) !default;
+$block-border-width:         $border-width !default;
+$block-border-color:         rgba($black, .1) !default;
+
+$block-light-color:          $body-color !default;
+$block-light-bg:             $white !default;
+$block-light-border-color:   $block-border-color !default;
+
+$block-dark-color:           $white !default;
+$block-dark-bg:              $black !default;
+$block-dark-border-color:    rgba($white, .2) !default;
+
+$block-lead-font-size:       $font-size-base * 1.5 !default;
+$block-lead-font-size-xs:    $block-lead-font-size * .9 !default;
+
+$block-title-font-size:      $font-size-base * 3 !default;
+$block-title-line-height:    $line-height-base * .8 !default;
+
+$block-label-font-weight:    $font-weight-normal !default;
+$block-label-text-transform: uppercase !default;
+// scss-docs-end block-variables
+
+
+// Callouts
+
+// scss-docs-start callout-variables
+$callout-bg:            $white !default;
+$callout-padding-x:     $spacer * 1.3 !default;
+$callout-padding-y:     $spacer !default;
+$callout-border-width:  $border-width !default;
+$callout-border-color:  $gray-200 !default;
+$callout-border-radius: $border-radius !default;
+// scss-docs-end callout-variables
+
+
+// Stage
+$stage-bg:                    $body-bg !default;
+$stage-shelf-width:           $spacer * 15.6 !default;
+$stage-shelf-padding-top:     $spacer * 1.9 !default;
+$stage-toggle-offset:         $spacer * 1.3 !default;
+$stage-toggle-padding-x:      $spacer * .8 !default;
+$stage-toggle-padding-y:      $spacer * .3 !default;
+$stage-toggle-color:          $white !default;
+$stage-toggle-bg:             rgba($black, .1) !default;
+$stage-toggle-border-radius:  $border-radius !default;
+$stage-toggle-hover-color:    $stage-toggle-color !default;
+$stage-toggle-hover-bg:       $link-color !default;
+
+
+// Zoom
+$zoom-transition:         $transition-base !default;
+$zoom-overlay-bg:         $black !default;
+$zoom-overlay-transition: $transition-fade !default;
+
+
+// Featured List
+
+// scss-docs-start featured-list-variables
+$featured-list-font-size:       $font-size-base !default;
+$featured-list-border-width:    $border-width !default;
+$featured-list-border-color:    $gray-200 !default;
+
+$featured-list-icon-width:      $spacer * 3.8 !default;
+$featured-list-icon-font-size:  $featured-list-font-size * 2.3 !default;
+
+$featured-list-li-padding-left: $spacer * 5 !default;
+// scss-docs-end featured-list-variables
+
+
+// Icon List
+// scss-docs-start icon-list-variables
+$list-icon-padding-left: $spacer * 1.6 !default;
+// scss-docs-end icon-list-variables
+
+
+// Text Ribbon
+
+// scss-docs-start text-ribbon-variables
+$text-ribbon-min-width:     $spacer * 1.3 !default;
+$text-ribbon-padding-y:     $text-ribbon-min-width * .5 !default;
+$text-ribbon-bg:            $black !default;
+
+$text-ribbon-input-padding: $text-ribbon-padding-y !default;
+$text-ribbon-input-color:   $black !default;
+// scss-docs-end text-ribbon-variables
+
+
+// Statcard
+
+// scss-docs-start statcard-variables
+$statcard-border-radius:                $border-radius-sm !default;
+
+$statcard-desc-color:                   lighten($gray-700, 20%) !default;
+$statcard-desc-color-alt:               rgba($white, .65) !default;
+$statcard-desc-text-transform:          uppercase !default;
+
+$statcard-delta-indicator-padding:      .4rem !default;
+$statcard-delta-indicator-font-size:    $font-size-base * .8 !default;
+$statcard-delta-indicator-margin-x:     $spacer * .1 !default;
+$statcard-delta-indicator-border-width: $border-width * 4 !default;
+
+$statcard-hr-margin-x:                  -1rem !default;
+$statcard-hr-border-color:              rgba($white, .2) !default;
+// scss-docs-end statcard-variables
+
+
+// Statlist
+$statlist-border-width:  $border-width !default;
+$statlist-border-color:  $gray-200 !default;
+$statlist-margin-bottom: $spacer * 1.3 !default;
+$statlist-link-color:    inherit !default;
+$statlist-link-padding:  $spacer * .6 !default;
+$statlist-progress-bg:   $gray-100 !default;
+
+
+// Pull Quote
+
+// scss-docs-start pull-quote-variables
+$pull-quote-margin-top:          $spacer * 1.5 !default;
+$pull-quote-font-size:           $font-size-base * 1.5 !default;
+$pull-quote-font-size-xs:        $pull-quote-font-size * .8 !default;
+
+$pull-quote-img-width:           $spacer * 6.3 !default;
+$pull-quote-img-height:          $pull-quote-img-width !default;
+$pull-quote-img-width-xs:        $pull-quote-img-width * .8 !default;
+$pull-quote-img-height-xs:       $pull-quote-img-width-xs !default;
+
+$pull-quote-cite-font-size:      $pull-quote-font-size * .7 !default;
+$pull-quote-cite-font-size-xs:   $pull-quote-cite-font-size * .9 !default;
+$pull-quote-cite-color:          $gray-600 !default;
+$pull-quote-cite-text-transform: uppercase !default;
+// scss-docs-end pull-quote-variables
+
+
+// Divider
+
+// scss-docs-start divider-variables
+$hr-divider-font-size:              $font-size-sm * .9 !default;
+$hr-divider-line-height:            $hr-divider-font-size * 1.7 !default;
+$hr-divider-text-transform:         uppercase !default;
+$hr-divider-height:                 $border-width !default;
+
+$hr-content-padding-x:              $spacer !default;
+$hr-divider-content-color:          $gray-700 !default;
+$hr-divider-content-bg:             $body-bg !default;
+$hr-divider-before-bg:              $gray-subtle !default;
+
+$hr-divider-nav-padding-y:          $spacer * .3 !default;
+$hr-divider-nav-active-font-weight: $font-weight-light !default;
+// scss-docs-end divider-variables
+
+
+// Sidebar
+$sidebar-header-padding-bottom:   $spacer !default;
+$sidebar-brand-color:             $gray-700 !default;
+$sidebar-brand-hover-color:       $gray-800 !default;
+$sidebar-brand-font-size:         $font-size-base * 1.1 !default;
+$sidebar-brand-img-height:        $spacer * 3.8 !default;
+$sidebar-brand-img-height-xs:     $sidebar-brand-img-height * .7 !default;
+$sidebar-brand-icon-font-size:    $font-size-lg * 2 !default;
+$sidebar-form-margin-bottom:      $spacer * 1.9 !default;
+$sidebar-form-control-padding-x:  $spacer * .9 !default;
+$sidebar-form-btn-link-padding-x: $spacer * .63 !default;
+$sidebar-form-btn-link-padding-y: $spacer * .56 !default;
+$sidebar-form-btn-link-color:     lighten($gray-700, 25%) !default;
+$sidebar-toggler-color:           $gray-400 !default;
+$sidebar-toggler-hover-color:     $white !default;
+$sidebar-toggler-top:             $spacer * .1 !default;
+
+$sidebar-nav-toggleable-in-padding-bottom: $spacer * 1.3 !default;
+
+
+// Dashhead
+
+// scss-docs-start dashhead-variables
+$dashhead-toolbar-margin-top:            $spacer * .8 !default;
+$dashhead-toolbar-icon-width:            $spacer * 11.2 !default;
+$dashhead-toolbar-icon-margin-bottom:    0 !default;
+$dashhead-toolbar-icon-margin-bottom-sm: $spacer * .6 !default;
+$dashhead-toolbar-divider-width:         $border-width !default;
+$dashhead-toolbar-divider-height:        $spacer * 2.1 !default;
+$dashhead-toolbar-margin-x:              $spacer * .6 !default;
+$dashhead-toolbar-divider-bg:            $gray-200 !default;
+
+$dashhead-subtitle-margin-bottom:        $spacer * .25 !default;
+$dashhead-subtitle-color:                $nav-header-color !default;
+$dashhead-subtitle-text-transform:       uppercase !default;
+// scss-docs-end dashhead-variables
+
+
+// Datepicker
+$datepicker-padding:       $spacer * .3 !default;
+$datepicker-color:         $gray-800 !default;
+$datepicker-border-radius: $border-radius !default;
+
+$datepicker-inline-width:               $spacer * 13.8 !default;
+$datepicker-inline-border-width-before: $border-width * 7 !default;
+$datepicker-inline-border-color-before: rgba($black, .2) !default;
+$datepicker-inline-border-width-after:  $border-width * 6 !default;
+$datepicker-inline-border-color-after:  $white !default;
+
+$datepicker-table-margin-x:         $spacer * .6 !default;
+$datepicker-table-margin-y:         $spacer * .3 !default;
+$datepicker-table-td-size:          $spacer * 1.9 !default;
+$datepicker-table-td-border-radius: $datepicker-border-radius !default;
+$datepicker-th-hover-bg:            $gray-100 !default;
+
+$datepicker-day-bg:                   $gray-100 !default;
+$datepicker-disabled:                 $btn-link-disabled-color !default;
+$datepicker-today-color:              $body-color !default;
+$datepicker-today-active-hover-color: $white !default;
+$datepicker-range-bg:                 $gray-100 !default;
+
+$datepicker-span-height:        $spacer * 3.4 !default;
+$datepicker-span-border-radius: $datepicker-border-radius !default;
+$datepicker-span-hover-bg:      $gray-100 !default;
+
+$datepicker-switch-width: $spacer * 9.1 !default;
+
+$datepicker-cw-font-size: $font-size-sm * .7 !default;
+$datepicker-cw-width:     $spacer * .8 !default;
+$datepicker-cw-right:     $spacer * .1 !default;
+$datepicker-cw-left:      $spacer * .3 !default;
+
+$datepicker-input-daterange-border-radius:              $border-radius-sm !default;
+$datepicker-input-daterange-group-addon-width:          $spacer !default;
+$datepicker-input-daterange-group-addon-padding-x:      $spacer * .31 !default;
+$datepicker-input-daterange-group-addon-padding-y:      $spacer * .25 !default;
+$datepicker-input-daterange-group-addon-margin-x:       -($spacer * .3) !default;
+$datepicker-input-daterange-group-addon-border-width-y: $border-width !default;
+
+
+// Graphs
+$ex-graph-margin-bottom: $spacer * .9 !default;
+
+$ex-line-graph-height: $spacer * 17.1 !default;
+
+
+// Growl
+
+// scss-docs-start growl-variables
+$growl-top:                        $spacer * 4.1 !default;
+$growl-space-x:                    $spacer * .9 !default;
+$growl-width:                      $spacer * 21.625 !default;
+
+$growl-alert-padding-start:        $alert-padding-x * .625 !default;
+$growl-alert-padding-end:          $alert-padding-x * 2.0625 !default;
+$growl-alert-padding-y:            $alert-padding-y * .8125 !default;
+$growl-alert-color:                rgba($black, .85) !default;
+$growl-alert-bg-factor:            .6 !default;
+$growl-alert-bg:                   rgba(#f6f6f6, $growl-alert-bg-factor) !default;
+$growl-alert-blur:                 $spacer * 1.875 !default;
+$growl-alert-box-shadow:           0 ($spacer * .5) ($growl-alert-blur * 1.333) rgba($black, .25), 0 0 ($growl-alert-blur * .1) rgba($black, .55) !default;
+$growl-alert-box-shadow-inset:     inset 0 0 ($growl-alert-blur * .1) rgba($white, .1) !default;
+$growl-alert-margin-bottom:        $spacer * .6 !default;
+$growl-alert-font-family:          "SF Pro", $font-family-sans-serif !default;
+$growl-alert-font-size:            $font-size-base * .8125 !default;
+$growl-alert-line-height:          $line-height-base * 1.06 !default;
+$growl-alert-border-radius:        $border-radius-xl !default;
+$growl-alert-border-width:         0 !default;
+$growl-alert-dismissable-color:    $white !default;
+$growl-alert-dismissable-top:      min($growl-alert-padding-start, $growl-alert-padding-y) * .25 !default;
+$growl-alert-dismissable-width:    min($growl-alert-padding-start, $growl-alert-padding-y) !default;
+$growl-alert-dismissable-height:   $growl-alert-dismissable-width !default;
+$growl-alert-dismissiable-padding: div(min($growl-alert-padding-start, $growl-alert-padding-end, $growl-alert-padding-y), 2);
+// scss-docs-end growl-variables
+
+
+// Profile Header
+
+// scss-docs-start profile-header-variables
+$profile-header-height:                  $spacer * 31.3 !default;
+$profile-header-height-sm:               $profile-header-height * .8 !default;
+$profile-header-height-xs:               $profile-header-height-sm * .7 !default;
+$profile-header-padding-bottom:          3.2rem !default;
+
+$profile-header-container-inner-width:   $spacer * 18.8 !default;
+
+$profile-header-media-object-width:      $spacer * 6.9 !default;
+$profile-header-media-object-width-sm:   $profile-header-media-object-width * .7 !default;
+$profile-header-media-object-box-shadow: 0 ($spacer * .1) ($spacer * .2) rgba($black, .05) !default;
+
+$profile-header-bio-font-size:           $font-size-base !default;
+$profile-header-bio-color:               $white !default;
+
+$profile-header-user-margin-top:         $spacer * 1.3 !default;
+$profile-header-user-color:              $white !default;
+
+$profile-header-nav-link-padding-x:      $spacer * .6 !default;
+$profile-header-nav-link-padding-bottom: $spacer * 1.1 !default;
+$profile-header-nav-link-font-size:      $font-size-base !default;
+$profile-header-nav-link-color:          rgba($white, .5) !default;
+$profile-header-nav-link-hover-color:    $white !default;
+$profile-header-nav-active-margin-left:  -($spacer * .6) !default;
+$profile-header-nav-active-border-width: $border-width * 10 !default;
+// scss-docs-end profile-header-variables

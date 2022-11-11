@@ -1,0 +1,84 @@
+// Sidebar
+
+.sidebar {
+  .nav-toggleable-sm,
+  .nav-toggleable-md {
+    &.in {
+      padding-bottom: $sidebar-nav-toggleable-in-padding-bottom;
+    }
+  }
+}
+
+.sidebar-header {
+  position: relative;
+  padding-bottom: $sidebar-header-padding-bottom;
+  @include clearfix ();
+}
+
+.sidebar-toggler {
+  position: absolute;
+  top: $sidebar-toggler-top;
+  right: 0;
+  color: $sidebar-toggler-color;
+  border-color: $sidebar-toggler-color;
+
+  &:hover,
+  &:focus {
+    color: $sidebar-toggler-hover-color;
+    background-color: $sidebar-toggler-color;
+  }
+}
+
+.sidebar-brand {
+  float: left;
+  font-size: $sidebar-brand-font-size;
+  line-height: 1;
+  color: $sidebar-brand-color;
+
+  &:hover {
+    color: $sidebar-brand-hover-color;
+    text-decoration: none;
+  }
+
+  > img {
+    height: $sidebar-brand-img-height-xs;
+
+    @include media-breakpoint-up(sm) {
+      height: $sidebar-brand-img-height;
+    }
+  }
+}
+
+.sidebar-brand-icon {
+  font-size: $sidebar-brand-icon-font-size;
+}
+
+.sidebar-form {
+  position: relative;
+  margin-bottom: $sidebar-form-margin-bottom;
+
+  .form-control {
+    padding-right: $sidebar-form-control-padding-x;
+    padding-left: $sidebar-form-control-padding-x;
+  }
+
+  .btn-link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: $sidebar-form-btn-link-padding-y $sidebar-form-btn-link-padding-x;
+    line-height: 0;
+    color: $sidebar-form-btn-link-color;
+    border: 0;
+
+    .glyphicon {
+      vertical-align: text-top;
+    }
+  }
+}
+
+.sidebar-nav {
+  @include media-breakpoint-up(lg) {
+    margin-right: $spacer * 2;
+  }
+}

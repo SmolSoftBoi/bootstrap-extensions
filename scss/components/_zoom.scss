@@ -1,0 +1,61 @@
+// Zoom
+
+/* stylelint-disable-next-line selector-no-qualifying-type */
+img[data-action="zoom"] {
+  cursor: pointer;
+  cursor: zoom-in;
+
+  /* stylelint-disable-next-line selector-no-qualifying-type */
+  &.zoom-img {
+    cursor: pointer;
+    cursor: zoom-out;
+  }
+}
+
+.zoom-img,
+.zoom-img-wrap {
+  position: relative;
+  z-index: $zindex-zoom;
+  transition: $zoom-transition;
+}
+
+.zoom-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: $zindex-zoom - 1;
+  pointer-events: none;
+  background: $zoom-overlay-bg;
+  opacity: 0;
+  transition: $zoom-overlay-transition;
+}
+
+.zoom-overlay-open,
+.zoom-overlay-transitioning {
+  cursor: default;
+}
+
+.zoom-overlay-open {
+  overflow: hidden;
+
+  .zoom-overlay {
+    opacity: $modal-backdrop-opacity;
+  }
+
+  .list-group-open {
+    &:hover,
+    &:focus {
+      z-index: auto;
+    }
+  }
+}
+
+
+// Reset Media Overflow
+
+.media,
+.media-body {
+  overflow: visible;
+}

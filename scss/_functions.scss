@@ -1,0 +1,14 @@
+// Bootstrap functions
+//
+// Utility mixins and functions for evaluating source code across our variables, maps, and mixins.
+
+// Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "bootstrap/scss/functions";
+
+@function blur-map($map) {
+  $result: ();
+  @each $key, $value in $map {
+    $result: map-merge($result, ($key: blur($value)));
+  }
+  @return $result;
+}

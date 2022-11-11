@@ -1,0 +1,26 @@
+// Statlist
+
+.statlist {
+  padding-left: 0;
+  margin-bottom: $statlist-margin-bottom;
+  list-style: none;
+  border-bottom: $statlist-border-width solid $statlist-border-color;
+}
+
+.statlist-link {
+  position: relative;
+  display: block;
+  padding: $statlist-link-padding;
+  color: $statlist-link-color;
+  border-top: $statlist-border-width solid $statlist-border-color;
+}
+
+.statlist-progress {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: $zindex-statlist-progress;
+  display: block;
+  background-color: $statlist-progress-bg;
+}

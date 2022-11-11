@@ -1,0 +1,58 @@
+// Divider
+
+.hr-divider {
+  position: relative;
+  font-size: $hr-divider-font-size;
+  line-height: $hr-divider-line-height;
+  text-align: center;
+  text-transform: $hr-divider-text-transform;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 100%;
+    height: $hr-divider-height;
+    content: "";
+    background-color: $hr-divider-before-bg;
+  }
+
+  .hr-divider-content {
+    position: relative;
+    z-index: $zindex-hr-divider-content;
+    display: inline-block;
+    padding-right: $hr-content-padding-x;
+    padding-left: $hr-content-padding-x;
+    color: $hr-divider-content-color;
+    vertical-align: middle;
+    background-color: $hr-divider-content-bg;
+
+    .nav-item {
+      float: left;
+    }
+  }
+}
+
+.hr-divider-heading {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 100%;
+  color: inherit;
+}
+
+.hr-divider-nav {
+  > li {
+    > a {
+      padding-top: $hr-divider-nav-padding-y;
+      padding-bottom: $hr-divider-nav-padding-y;
+      font-size: 100%;
+    }
+  }
+
+  > .active {
+    > a {
+      font-weight: 300;
+      background: transparent;
+    }
+  }
+}

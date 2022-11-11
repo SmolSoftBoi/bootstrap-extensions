@@ -1,0 +1,8 @@
+// Re-assigned maps
+//
+// Placed here so that others can override the default Sass maps and see automatic updates to utilities and more.
+
+// Include required parts
+@import "bootstrap/scss/maps";
+
+$utilities-blur: blur-map($spacers) !default;

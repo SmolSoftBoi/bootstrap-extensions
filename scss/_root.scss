@@ -1,0 +1,7 @@
+// Include required parts
+@import "bootstrap/scss/root";
+
+:root {
+  // Fonts
+  --#{$prefix}font-serif: #{inspect($font-family-serif)};
+}

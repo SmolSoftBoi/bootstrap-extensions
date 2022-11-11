@@ -1,0 +1,25 @@
+// Load Bootstrap Extensions variables and mixins
+@import "variables";
+@import "../../../scss/bootstrap-extensions";
+
+// Load docs components
+@import "navbar";
+@import "masthead";
+@import "content";
+@import "sidebar";
+@import "layout";
+@import "toc";
+@import "component-examples";
+@import "buttons";
+
+.bd-bg {
+  --bd-pink-rgb: #{to-rgb($pink)};
+  --bd-violet-rgb: #{to-rgb($indigo)};
+  background-image: radial-gradient(ellipse at top left, rgba(var(--bs-primary-rgb), .5), transparent 50%), radial-gradient(ellipse at top right, rgba(var(--bs-secondary-rgb), .5), transparent 50%), radial-gradient(ellipse at center right, rgba(var(--bd-violet-rgb), .5), transparent 50%), radial-gradient(ellipse at center left, rgba(var(--bd-pink-rgb), .5), transparent 50%);
+  padding: $spacer $spacer $spacer * 3;
+  margin-bottom: 0;
+  border-radius: $border-radius;
+}
+
+// Load docs dependencies
+@import "syntax";

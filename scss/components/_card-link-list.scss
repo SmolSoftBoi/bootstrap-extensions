@@ -1,0 +1,13 @@
+// Card Link List
+
+.card-link-list {
+  a {
+    margin-left: $card-link-list-margin-left;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}

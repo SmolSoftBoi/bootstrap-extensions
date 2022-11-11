@@ -1,0 +1,34 @@
+// Dropdown
+
+.dropdown-menu {
+  padding-top: $dropdown-padding-y;
+  padding-bottom: $dropdown-padding-y;
+
+  > li {
+    > a {
+      padding: $dropdown-item-padding-y $dropdown-item-padding-x;
+    }
+  }
+}
+
+.dropdown-item {
+  .icon {
+    margin-right: $dropdown-item-padding-y;
+
+    > svg {
+      height: $dropdown-font-size;
+    }
+  }
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .dropdown-menu#{$infix}-center {
+      right: auto;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+  }
+}

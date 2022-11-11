@@ -1,0 +1,117 @@
+// Profile Header
+
+.profile-header {
+  position: relative;
+  display: table;
+  width: 100%;
+  height: $profile-header-height-xs;
+  padding-bottom: $profile-header-padding-bottom;
+  margin-bottom: 0;
+  text-align: center;
+  background-size: cover;
+  border: 0;
+
+  .container,
+  .container-fluid {
+    display: table-cell;
+    width: $spacer * 62500;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .container-inner {
+    max-width: $profile-header-container-inner-width;
+    margin: 0 auto;
+  }
+
+  .media-object {
+    display: inline-block;
+    width: $profile-header-media-object-width-sm;
+    margin-right: 0;
+    @include box-shadow($profile-header-media-object-box-shadow);
+  }
+}
+
+.profile-header-bio {
+  font-size: $profile-header-bio-font-size;
+  color: $profile-header-bio-color;
+}
+
+.profile-header-user {
+  margin-top: $profile-header-user-margin-top;
+  color: $profile-header-user-color;
+}
+
+@include media-breakpoint-up(sm) {
+  .profile-header {
+    height: $profile-header-height-sm;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .profile-header {
+    height: $profile-header-height;
+
+    .media-object {
+      width: $profile-header-media-object-width;
+    }
+  }
+}
+
+
+// Profile Header Nav
+.profile-header-nav {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  .nav {
+    vertical-align: top;
+    border-bottom: 0;
+  }
+
+  .nav-link {
+    padding: 0 $profile-header-nav-link-padding-x $profile-header-nav-link-padding-bottom;
+    font-size: $profile-header-nav-link-font-size;
+    color: $profile-header-nav-link-color;
+    @include transition(color .2s ease-in-out);
+  }
+
+  .nav-item {
+    position: relative;
+  }
+
+  .nav-tabs .nav-link:focus,
+  .nav-tabs .nav-link:hover,
+  .nav-item .nav-link.active {
+    color: $profile-header-nav-link-hover-color;
+    background: transparent;
+    border-color: transparent;
+  }
+
+  .active {
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      margin-left: $profile-header-nav-active-margin-left;
+      content: "";
+      border-right: $profile-header-nav-active-border-width solid transparent;
+      border-bottom: $profile-header-nav-active-border-width solid $nav-tabs-active-link-hover-bg;
+      border-left: $profile-header-nav-active-border-width solid transparent;
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .profile-header-nav {
+    .nav {
+      > li {
+        > a {
+          padding-bottom: 0 ($spacer * .9) ($spacer * 1.4);
+        }
+      }
+    }
+  }
+}

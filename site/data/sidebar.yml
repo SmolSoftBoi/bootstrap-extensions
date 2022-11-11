@@ -1,0 +1,61 @@
+# This file holds all sidebar menu's entries.
+# The logic for the sidebar generation is in "site/layouts/partials/docs-sidebar.html".
+
+- title: Getting started
+  color: indigo
+  pages:
+    - title: Introduction
+    - title: Download
+
+- title: Customize
+  color: pink
+  pages:
+    - title: Overview
+    - title: Sass
+
+- title: Layout
+  color: teal
+  pages:
+    - title: Containers
+
+- title: Content
+  color: gray
+  pages:
+    - title: Tables
+
+- title: Forms
+  color: blue
+  pages:
+    - title: Icon input
+
+- title: Extended components
+  color: cyan
+  pages:
+    - title: Buttons
+    - title: List group
+    - title: Modals
+    - title: Navbar
+
+- title: Components
+  color: orange
+  pages:
+    - title: Card link list
+    - title: Card profile
+    - title: Carousel light
+    - title: Nav bordered
+    - title: Navbar transparent
+    - title: Blocks
+    - title: Callouts
+    - title: Dashhead
+    - title: Divided heading
+    - title: Featured lists
+    - title: Growl
+    - title: Icon lists
+    - title: Icon nav
+    - title: Media list conversation
+    - title: Media list stream
+    - title: Media list users
+    - title: Profile header
+    - title: Pull quotes
+    - title: Stat cards
+    - title: Text ribbons

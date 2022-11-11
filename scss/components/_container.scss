@@ -1,0 +1,24 @@
+// Container
+
+.container-fill-height {
+  display: table;
+  width: 100%;
+  height: 100vh;
+
+  .container-content-bottom,
+  .container-content-middle {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .container-content-bottom {
+    vertical-align: bottom;
+  }
+}
+
+.container-fluid-spacious {
+  @include media-breakpoint-up(sm) {
+    padding-right: $container-spacious-padding-x;
+    padding-left: $container-spacious-padding-x;
+  }
+}

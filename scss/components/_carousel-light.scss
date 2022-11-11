@@ -1,0 +1,26 @@
+// Carousel Light
+
+.carousel-light {
+  .carousel-control-next,
+  .carousel-control-prev {
+    color: $carousel-light-control-color;
+    text-decoration: none;
+    text-shadow: none;
+    background-image: none;
+  }
+
+  .carousel-indicators {
+    li {
+      background-color: $carousel-light-indicator-color;
+      border: 0;
+      margin-left: $spacer * 0.1875;
+      margin-right: $spacer * 0.1875;
+      width: $spacer * 1.875;
+    }
+
+    .active {
+      background-color: $carousel-light-indicator-color-active;
+      border: $border-width solid $carousel-light-indicator-border-color;
+    }
+  }
+}

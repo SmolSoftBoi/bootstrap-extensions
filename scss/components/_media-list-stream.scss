@@ -1,0 +1,76 @@
+// Media List Stream
+
+.media-list-stream {
+  .media {
+    .list-group-item {
+      display: flex;
+      margin-top: 0;
+    }
+
+    .text-muted {
+      a {
+        font-weight: $media-list-stream-text-muted-font-wegiht;
+        color: $text-muted;
+      }
+    }
+  }
+
+  .media-body-inline-grid {
+    width: 100%;
+  }
+
+  .media-body-inline-img,
+  .media-body-inline-grid {
+    margin: $media-list-stream-body-inline-top 0 $media-list-stream-body-inline-bottom;
+  }
+
+  .media-body-inline-grid img,
+  .media-body-inline-img {
+    max-width: 100%;
+  }
+
+  .media-object {
+    width: $media-list-stream-object-width-sm;
+    margin-right: $media-list-stream-object-margin-right;
+    border-radius: 100%;
+  }
+
+  .media-body {
+    .media-list {
+      .media-object {
+        width: $media-list-stream-list-object-width;
+      }
+    }
+  }
+
+  .media-list {
+    .media-object {
+      display: none;
+    }
+  }
+
+  .media-body-actions {
+    margin-top: $media-list-stream-body-actions-margin-top;
+  }
+
+  .media-heading {
+    > h5 {
+      margin-top: $media-list-stream-heading-margin-top;
+      margin-bottom: 0;
+    }
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .media-list-stream {
+    .media-list {
+      .media-object {
+        display: block;
+      }
+    }
+
+    .media-object {
+      width: $media-list-stream-object-width;
+    }
+  }
+}

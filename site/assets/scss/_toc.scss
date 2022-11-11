@@ -1,0 +1,31 @@
+.bd-toc {
+  nav {
+    ul {
+      padding-left: 0;
+      list-style: none;
+
+      ul {
+        padding-left: $spacer;
+        margin-top: $spacer * .5;
+      }
+    }
+
+    li {
+      margin-bottom: $spacer;
+    }
+
+    a {
+      color: inherit;
+
+      &:not(:hover) {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.bd-toc-collapse {
+  @include media-breakpoint-up(md) {
+    display: block !important;
+  }
+}

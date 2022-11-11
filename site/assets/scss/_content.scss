@@ -1,0 +1,9 @@
+//
+// Bootstrap docs content theming
+//
+
+.bd-content {
+  > h2:not(:first-child) {
+    margin-top: $spacer;
+  }
+}

@@ -1,0 +1,95 @@
+// Statcard
+
+.statcard {
+  border-radius: $statcard-border-radius;
+}
+
+.statcard-number {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  .badge {
+    font-size: 45%;
+    vertical-align: middle;
+  }
+}
+
+.statcard-desc {
+  font-size: 85%;
+  color: $statcard-desc-color;
+  text-transform: $statcard-desc-text-transform;
+}
+
+.delta-indicator {
+  align-items: center;
+  display: inline-flex;
+  padding: $statcard-delta-indicator-padding;
+  font-size: $statcard-delta-indicator-font-size;
+  vertical-align: middle;
+
+  &::after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-right: $statcard-delta-indicator-margin-x;
+    margin-left: $statcard-delta-indicator-margin-x;
+    vertical-align: middle;
+    content: "";
+    border-right: $statcard-delta-indicator-border-width solid transparent;
+    border-left: $statcard-delta-indicator-border-width solid transparent;
+  }
+}
+
+.delta-positive {
+  color: $success;
+
+  &::after {
+    border-top: 0;
+    border-bottom: $statcard-delta-indicator-border-width solid;
+  }
+}
+
+.delta-negative {
+  color: $danger;
+
+  &::after {
+    border-top: $statcard-delta-indicator-border-width solid;
+    border-bottom: 0;
+  }
+}
+
+.statcard-primary,
+.statcard-success,
+.statcard-info,
+.statcard-warning,
+.statcard-danger {
+  .statcard-number,
+  .delta-positive,
+  .delta-negative {
+    font-weight: 400;
+    color: inherit;
+  }
+
+  .statcard-desc {
+    font-weight: 400;
+    color: $statcard-desc-color-alt;
+  }
+
+  .statcard-hr {
+    margin-right: $statcard-hr-margin-x;
+    margin-left: $statcard-hr-margin-x;
+  }
+}
+
+@each $color, $value in $theme-colors {
+  $color-rgb: to-rgb($value);
+  .statcard-#{$color} {
+    color: color-contrast($value);
+    background-color: RGBA($color-rgb, var(--#{$prefix}bg-opacity, 1));
+
+    .statcard-desc {
+      color: color-contrast($value);
+      color: RGBA(color-contrast($value), alpha($statcard-desc-color-alt));
+    }
+  }
+}

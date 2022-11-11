@@ -1,0 +1,20 @@
+// Button Toolbar
+
+.btn-toolbar {
+  .btn-toolbar-item {
+    float: left;
+  }
+
+  > .btn-toolbar-item {
+    margin-left: $btn-toolbar-margin-left;
+  }
+}
+
+.btn-toolbar-divider {
+  float: left;
+  width: $btn-toolbar-divider-width;
+  height: $btn-toolbar-divider-height;
+  margin-right: $btn-toolbar-divider-margin-right;
+  margin-left: $btn-toolbar-divider-margin-left;
+  background-color: $btn-toolbar-divider-bg;
+}

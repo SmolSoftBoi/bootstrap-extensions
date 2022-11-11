@@ -1,0 +1,56 @@
+languageCode:           "en"
+title:                  "Bootstrap Extensions"
+
+security:
+  enableInlineShortcodes: true
+  funcs:
+    getenv:
+      - ^HUGO_
+
+markup:
+  goldmark:
+    renderer:
+      unsafe:           true
+  highlight:
+    noClasses:          false
+  tableOfContents:
+    startLevel:         2
+    endLevel:           6
+
+buildDrafts:            true
+buildFuture:            true
+
+enableRobotsTXT:        true
+metaDataFormat:         "yaml"
+disableKinds:           ["404", "taxonomy", "term", "RSS"]
+
+publishDir:             "_site"
+
+module:
+  mounts:
+    - source:           dist
+      target:           static/docs/dist
+    - source:           node_modules/bootstrap/dist/js
+      target:           static/docs/dist/js
+    - source:           site/assets
+      target:           assets
+    - source:           site/content
+      target:           content
+    - source:           site/data
+      target:           data
+    - source:           site/layouts
+      target:           layouts
+    - source:           site/static
+      target:           static
+
+params:
+  subtitle:             "Extensions for Bootstrap."
+  description:          "Bootstrap-powered user interface and behaviour framework."
+  authors:              "Kristian Matthews-Kennington, and Bootstrap contributors"
+
+  github_org:           "https://github.com/smolsoftboi/bootstrap-extensions"
+  repo:                 "https://github.com/smolsoftboi/bootstrap-extensions"
+
+  anchors:
+    min: 2
+    max: 5

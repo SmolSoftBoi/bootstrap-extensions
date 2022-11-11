@@ -1,0 +1,72 @@
+// Media List Conversation
+
+.media-list-conversation {
+  .media-object {
+    width:  $media-list-conversation-object-width;
+    height: $media-list-conversation-object-height;
+    margin-right: $media-list-conversation-object-margin-x + ($media-list-conversation-body-text-padding-x * .5);
+  }
+
+  .media-body-text {
+    position: relative;
+    padding: $media-list-conversation-body-text-padding-y $media-list-conversation-body-text-padding-x;
+    background-color: $media-list-conversation-body-text-bg;
+    border-radius: $media-list-conversation-body-text-border-radius;
+
+    &:first-child {
+      &::before {
+        position: absolute;
+        top: $media-list-conversation-body-text-padding-x * 1.1;
+        left: -($media-list-conversation-body-text-padding-x * .5);
+        display: inline-block;
+        width: 0;
+        height: 0;
+        margin-left: $media-list-conversation-body-text-padding-x * .1;
+        vertical-align: middle;
+        content: "";
+        border-top: ($border-width * 6) solid transparent;
+        border-right: ($border-width * 6) solid $media-list-conversation-body-text-bg;
+        border-bottom: ($border-width * 6) solid transparent;
+      }
+    }
+
+    + .media-body-text {
+      margin-top: $spacer * .3;
+    }
+  }
+
+  .media-footer {
+    a {
+      font-weight: 400;
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .media-current-user {
+    .media-body-text {
+      color: $media-list-conversation-current-user-body-text-color;
+      background-color: $media-list-conversation-current-user-body-text-bg;
+
+      &:first-child {
+        &::before {
+          right: -($media-list-conversation-body-text-padding-x * .5);
+          left: auto;
+          margin-right: $media-list-conversation-body-text-padding-x * .1;
+          margin-left: 0;
+          border-right: 0;
+          border-left: ($border-width * 6) solid $media-list-conversation-current-user-body-text-bg;
+        }
+      }
+    }
+
+    .media-object {
+      margin-right: 0;
+      margin-left: $media-list-conversation-object-margin-x + ($media-list-conversation-body-text-padding-x * .5);
+    }
+  }
+}

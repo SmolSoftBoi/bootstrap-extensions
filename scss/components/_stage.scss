@@ -1,0 +1,52 @@
+// Stage
+
+// All Page Contents Wrapper
+
+.stage {
+  position: relative;
+  background-color: $stage-bg;
+}
+
+
+// Shelf Contents
+.stage-shelf {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  width: $stage-shelf-width;
+  padding-top: $stage-shelf-padding-top;
+  background-color: darken($stage-bg, 5%);
+}
+
+.stage-shelf-right {
+  right: 0;
+  left: auto;
+}
+
+
+// Stage Shelf Button Toggle
+
+.stage-toggle {
+  position: absolute;
+  top: $stage-toggle-offset;
+  left: $stage-toggle-offset;
+  z-index: $zindex-stage-toggle;
+  padding: $stage-toggle-padding-y $stage-toggle-padding-x;
+  color: $stage-toggle-color;
+  background-color: $stage-toggle-bg;
+  border-radius: $stage-toggle-border-radius;
+
+  &:hover,
+  &:focus {
+    color: $stage-toggle-hover-color;
+    text-decoration: none;
+    background-color: $stage-toggle-hover-bg;
+  }
+}
+
+.stage-toggle-right {
+  right: $stage-toggle-offset;
+  left: auto;
+}

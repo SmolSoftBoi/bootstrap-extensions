@@ -1,0 +1,39 @@
+// List Group
+
+
+// Header
+.list-group-header {
+  display: block;
+  padding: $list-group-header-padding-y $list-group-header-padding-x;
+  margin-bottom: -($list-group-border-width);
+  font-weight: 400;
+  color: $list-group-header-color;
+  background-color: transparent;
+  border: $list-group-border-width solid $list-group-border-color;
+
+  // Round First & Last Items
+  &:first-child {
+    @include border-top-radius($list-group-border-radius);
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+    @include border-bottom-radius($list-group-border-radius);
+  }
+}
+
+
+// Progress Bar
+.list-group-progress {
+  z-index: $zindex-list-group-progress;
+}
+
+.list-group-progress-bar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: $zindex-list-group-progress;
+  display: block;
+  background-color: $list-group-progress-bg;
+}

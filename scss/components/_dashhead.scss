@@ -1,0 +1,91 @@
+// Dashhead
+
+.dashhead {
+  @include clearfix ();
+}
+
+.dashhead-titles {
+  @include media-breakpoint-up(md) {
+    float: left;
+  }
+}
+
+.dashhead-title {
+  margin-top: 0;
+}
+
+.dashhead-subtitle {
+  margin-top: 0;
+  margin-bottom: $dashhead-subtitle-margin-bottom;
+  font-size: 85%;
+  font-weight: 400;
+  color: $dashhead-subtitle-color;
+  text-transform: uppercase;
+}
+
+.dashhead-toolbar {
+  margin-left: 0;
+
+  .input-with-icon {
+    width: 100%;
+    margin-bottom: $dashhead-toolbar-icon-margin-bottom-sm;
+    margin-left: 0;
+  }
+
+  @include media-breakpoint-up(md) {
+    float: right;
+    margin-top: $dashhead-toolbar-margin-top;
+
+    .input-with-icon {
+      width: $dashhead-toolbar-icon-width;
+      margin-bottom: $dashhead-toolbar-icon-margin-bottom;
+    }
+  }
+}
+
+.dashhead-toolbar-divider {
+  float: left;
+  width: $dashhead-toolbar-divider-width;
+  height: $dashhead-toolbar-divider-height;
+  margin-right: $dashhead-toolbar-margin-x;
+  margin-left: $dashhead-toolbar-margin-x;
+  background-color: $dashhead-toolbar-divider-bg;
+}
+
+.dashhead-toolbar-item {
+  float: left;
+
+  @include media-breakpoint-down(sm) {
+    &.btn-group-halves,
+    &.btn-group-thirds,
+    &.btn-group-fourths {
+      width: 100%;
+
+      .btn {
+        margin-left: 0;
+      }
+    }
+
+    &.btn-group-halves {
+      .btn {
+        width: 50%;
+      }
+    }
+
+    &.btn-group-thirds {
+      .btn {
+        width: 33%;
+
+        &:last-child {
+          width: 34%;
+        }
+      }
+    }
+
+    &.btn-group-fourths {
+      .btn {
+        width: 25%;
+      }
+    }
+  }
+}

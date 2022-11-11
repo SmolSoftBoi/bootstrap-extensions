@@ -1,0 +1,46 @@
+// Modal
+
+.modal-body-scroller {
+  max-height: $modal-scroller-height;
+  overflow: auto;
+  @include border-radius($modal-scroller-border-radius);
+}
+
+.modal-body + .modal-body {
+  border-top: $modal-footer-border-width solid $modal-footer-border-color;
+}
+
+
+// Modal Actions
+.modal-actions {
+  @include clearfix ();
+}
+
+.modal-action {
+  float: left;
+  width: 50%;
+  padding: $modal-inner-padding;
+  border: solid $modal-footer-border-color;
+  border-width: $modal-footer-border-width 0 0;
+  @include border-radius(0);
+
+  &:first-child {
+    border-bottom-left-radius: ($modal-content-border-radius - 1);
+  }
+
+  &:last-child {
+    border-bottom-right-radius: ($modal-content-border-radius - 1);
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+    background-color: $modal-action-bg;
+    border-color: $modal-footer-border-color;
+  }
+
+  + .modal-action {
+    border-left-width: $modal-footer-border-width;
+  }
+}

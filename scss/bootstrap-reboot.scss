@@ -1,16 +1,13 @@
 // 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
-@import "bootstrap/scss/functions";
+@import "functions";
 
-// 2. Include required Bootstrap stylesheets
-@import "bootstrap/scss/variables";
-
-// 3. Include any default variable overrides here
+// 2. Include required stylesheets
 @import "variables";
 
-// 4. Include remainder of required parts
-@import "bootstrap/scss/maps";
-@import "bootstrap/scss/mixins";
-@import "bootstrap/scss/root";
+// 3. Include remainder of required parts
+@import "maps";
+@import "mixins";
+@import "root";
 
-// 5. Include Bootstrap parts
+// 4. Include Bootstrap parts
 @import "bootstrap/scss/reboot";

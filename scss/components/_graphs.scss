@@ -1,0 +1,15 @@
+// Graphs
+
+canvas {
+  display: block;
+}
+
+.ex-graph {
+  display: block;
+  margin: 0 auto $ex-graph-margin-bottom;
+}
+
+.ex-line-graph {
+  width: 100%;
+  height: $ex-line-graph-height;
+}

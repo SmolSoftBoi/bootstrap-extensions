@@ -1,18 +1,15 @@
 // 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
-@import "bootstrap/scss/functions";
+@import "functions";
 
-// 2. Include required Bootstrap stylesheets
-@import "bootstrap/scss/variables";
-
-// 3. Include any default variable overrides here
+// 2. Include required stylesheets
 @import "variables";
 
-// 4. Include remainder of required parts
-@import "bootstrap/scss/maps";
-@import "bootstrap/scss/mixins";
-@import "bootstrap/scss/root";
+// 3. Include remainder of required parts
+@import "maps";
+@import "mixins";
+@import "root";
 
-// 5. Include Bootstrap parts
+// 4. Include Bootstrap parts
 @import "bootstrap/scss/utilities";
 @import "bootstrap/scss/reboot";
 @import "bootstrap/scss/type";
@@ -46,9 +43,48 @@
 @import "bootstrap/scss/placeholders";
 @import "bootstrap/scss/helpers";
 
-// 6. Include other parts
+// 5. Include other parts
+@import "components/type";
+@import "components/container";
+@import "components/tables";
+@import "components/table-sorter";
+@import "components/forms";
+@import "components/buttons";
+@import "components/nav";
+@import "components/nav-bordered";
+@import "components/nav-icon";
 @import "components/navbar";
 @import "components/navbar-transparent";
+@import "components/card-link-list";
+@import "components/cards-profile";
+@import "components/list-avatar";
+@import "components/list-icon";
+@import "components/list-group";
+@import "components/modal";
+@import "components/bi";
+@import "components/carousel-light";
+@import "components/block";
+@import "components/callouts";
+@import "components/dashhead";
+@import "components/datepicker";
+@import "components/divider";
+@import "components/dropdown";
+@import "components/featured-list";
+@import "components/graphs";
+@import "components/growl";
+@import "components/media";
+@import "components/media-list";
+@import "components/media-list-conversation";
+@import "components/media-list-stream";
+@import "components/media-list-users";
+@import "components/profile-header";
+@import "components/pull-quote";
+@import "components/sidebar";
+@import "components/stage";
+@import "components/statcard";
+@import "components/statlist";
+@import "components/text-ribbon";
+@import "components/zoom";
 
-// 7. Include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+// 6. Include utilities API last to generate classes based on the Sass map in `_utilities.scss`
 @import "bootstrap/scss/utilities/api";

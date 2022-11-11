@@ -1,0 +1,53 @@
+// Media List Users
+
+.media-list-users {
+  .list-group-item {
+    padding: $media-list-users-group-item-padding;
+    margin-top: 0;
+  }
+
+  .media-object {
+    width: $media-list-users-object-width;
+    margin-right: $media-list-users-object-margin-right;
+    border-radius: 100%;
+  }
+
+  .media-body {
+    p {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .media-body-secondary {
+    color: $media-list-users-body-secondary-color;
+  }
+
+  .btn {
+    .pull-right {
+      margin-top: $media-list-users-btn-pull-right-margin-top;
+    }
+  }
+}
+
+.modal-body {
+  .media-list-users {
+    margin-bottom: $media-list-users-margin-bottom;
+
+    .list-group-item {
+      border-right: 0;
+      border-left: 0;
+
+      &:first-child {
+        @include border-radius(4);
+        border-top: 0;
+      }
+
+      &:last-child {
+        @include border-radius(4);
+        border-bottom: 0;
+      }
+    }
+  }
+}

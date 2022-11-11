@@ -1,0 +1,23 @@
+// Icon List
+.list-icon {
+  padding-left: 0;
+  list-style: none;
+
+  > li {
+    padding: $list-inline-padding 0 $list-inline-padding $list-icon-padding-left;
+
+    > .icon {
+      float: left;
+      margin-left: -($list-icon-padding-left);
+      opacity: .5;
+    }
+  }
+
+  > .active {
+    color: $primary;
+
+    .icon {
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,65 @@
+// Text Ribbon
+
+.text-ribbon {
+  position: relative;
+  left: $text-ribbon-min-width;
+  padding-top: $text-ribbon-padding-y;
+  padding-bottom: $text-ribbon-padding-y;
+  overflow: hidden;
+  background-color: $text-ribbon-bg;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 100%;
+    bottom: 0;
+    width: $text-ribbon-min-width;
+    height: 100%;
+    content: "";
+    background-color: inherit;
+  }
+
+  span {
+    position: relative;
+    left: -($text-ribbon-min-width * .5);
+  }
+}
+
+.text-ribbon-input {
+  display: block;
+  width: 100%;
+  padding: $text-ribbon-input-padding;
+  margin: 0 0 $text-ribbon-padding-y;
+  font-weight: 400;
+  color: inherit;
+  background-color: $text-ribbon-bg;
+  border: 0;
+  border-radius: 0;
+  appearance: none;
+
+  &::placeholder {
+    color: $text-ribbon-input-color;
+    opacity: 1;
+  }
+
+  &:focus {
+    @include clearfix();
+
+    .text-ribbon-input {
+      float: left;
+      width: 49%;
+
+      + .text-ribbon-input {
+        margin-left: 2%;
+      }
+    }
+  }
+}
+
+@each $color, $value in $theme-colors {
+  $color-rgb: to-rgb($value);
+  .text-ribbon-#{$color} {
+    color: color-contrast($value);
+    background-color: RGBA($color-rgb, var(--#{$prefix}bg-opacity, 1));
+  }
+}
