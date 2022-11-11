@@ -30,6 +30,9 @@ jobs:
       - name: Install npm dependencies
         run: yarn install
 
+      - name: Build dist
+        run: yarn run dist
+
       - name: Build docs
         run: yarn run docs-build
 
