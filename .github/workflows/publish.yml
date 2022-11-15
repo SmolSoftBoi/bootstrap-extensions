@@ -1,0 +1,122 @@
+name: Publish and deploy
+
+on:
+  push:
+    branches:
+      - "main"
+  pull_request:
+  release:
+    types: [released]
+  workflow_dispatch:
+
+env:
+  FORCE_COLOR: 2
+  NODE: 16
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "${{ env.NODE }}"
+          cache: npm
+
+      - name: Install npm dependencies
+        run: yarn install
+
+      - name: Build dist
+        run: yarn run dist
+
+      - name: Build docs
+        run: yarn run docs-build
+
+  publish-npm:
+    # publish only if we are on our own repo
+    if: github.repository == 'SmolSoftBoi/bootstrap-extensions' && github.event_name == 'release'
+
+    needs: build # only run if build succeeds
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "${{ env.NODE }}"
+          cache: npm
+          registry-url: https://registry.npmjs.org/
+
+      - name: Install npm dependencies
+        run: yarn install
+
+      - name: Build dist
+        run: yarn run dist
+
+      - name: Publish
+        run: yarn publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
+
+  deploy-docs:
+    # publish only if we are on our own repo
+    if: github.repository == 'SmolSoftBoi/bootstrap-extensions' && github.event_name == 'release'
+
+    needs: publish-npm # only run if publish succeeds
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "${{ env.NODE }}"
+          cache: npm
+
+      - name: Install npm dependencies
+        run: yarn install
+
+      - name: Build dist
+        run: yarn run dist
+
+      - name: Build docs
+        run: yarn run docs-build
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v2
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          # Upload site
+          path: './_site'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
