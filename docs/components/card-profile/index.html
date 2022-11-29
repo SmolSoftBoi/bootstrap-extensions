@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Feature a user’s profile with the card profile variant.">
+<meta name="author" content="Kristian Matthews-Kennington, and Bootstrap contributors">
+<meta name="generator" content="Hugo 0.107.0">
+
+<meta name="docsearch:language" content="en">
+
+<title>Card profile · Bootstrap Extensions</title>
+
+<link rel="canonical" href="/docs/components/card-profile/"><link rel="preconnect" href="https://AK7KMZKZHQ-dsn.algolia.net" crossorigin>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+
+<link href="/docs/dist/css/bootstrap-extensions.css" rel="stylesheet" crossorigin="anonymous">
+
+<link href="/docs/assets/css/docs.css" rel="stylesheet">
+
+
+  </head>
+  <body>
+    <div class="skippy visually-hidden-focusable overflow-hidden">
+  <div class="container-xl">
+    <a class="d-inline-flex p-2 m-1" href="#content">Skip to main content</a>
+    <a class="d-none d-md-inline-flex p-2 m-1" href="#bd-docs-nav">Skip to docs navigation</a>
+  </div>
+</div>
+
+
+    <header class="navbar navbar-expand-lg navbar-dark bd-navbar sticky-top">
+  <nav class="container-xxl bd-gutter flex-wrap flex-lg-nowrap" aria-label="Main navigation">
+    <button class="navbar-toggler p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdSidebar" aria-controls="bdSidebar" aria-label="Toggle docs navigation">
+      <span class="navbar-toggler-icon"></span>
+      <span class="d-none fs-6 pe-1">Browse</span>
+    </button>
+
+    <a class="navbar-brand p-0 me-0 me-lg-2 fw-bolder" href="/">Bootstrap Extensions</a>
+
+    <div class="d-flex">
+      
+        <div class="bd-search" id="docsearch"></div>
+      
+
+      <button class="navbar-toggler d-flex d-lg-none order-3 p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+
+    <div class="offcanvas-lg offcanvas-end flex-grow-1" tabindex="-1" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel" data-bs-scroll="true">
+      <div class="offcanvas-header px-4 pb-0">
+        <h5 class="offcanvas-title text-white" id="bdNavbarOffcanvasLabel">Bootstrap Extensions</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#bdNavbar"></button>
+      </div>
+
+      <div class="offcanvas-body p-4 pt-0 p-lg-0">
+        <hr class="d-lg-none text-white-50">
+        <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav">
+          <li class="nav-item col-6 col-lg-auto">
+            <a class="nav-link py-2 px-0 px-lg-2 active" aria-current="true" href="/docs">Docs</a>
+          </li>
+        </ul>
+
+        <hr class="d-lg-none text-white-50">
+
+        <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
+          <li class="nav-item col-6 col-lg-auto">
+            <a class="nav-link py-2 px-0 px-lg-2" href="https://github.com/smolsoftboi/bootstrap-extensions" target="_blank" rel="noopener">
+              <small class="ms-2">GitHub</small>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+    
+  <div class="container-xxl bd-gutter mt-3 my-md-4 bd-layout">
+    <aside class="bd-sidebar">
+      <div class="offcanvas-lg offcanvas-start" tabindex="-1" id="bdSidebar" aria-labelledby="bdSidebarOffcanvasLabel">
+        <div class="offcanvas-header border-bottom">
+          <h5 class="offcanvas-title" id="bdSidebarOffcanvasLabel">Browse docs</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#bdSidebar"></button>
+        </div>
+
+        <div class="offcanvas-body">
+          <nav class="bd-links w-100" id="bd-docs-nav" aria-label="Docs navigation"><ul class="bd-links-nav list-unstyled mb-0 pb-3 pb-md-2 pe-lg-2">
+      <li class="bd-links-group py-2">
+        <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold" style="border-color: var(--bs-indigo);">
+          Getting started
+        </strong>
+
+        <ul class="list-unstyled fw-normal pb-2 small">
+            <li><a href="/docs/getting-started/introduction" class="bd-links-link d-inline-block rounded">Introduction</a></li>
+            <li><a href="/docs/getting-started/download" class="bd-links-link d-inline-block rounded">Download</a></li>
+        </ul>
+      </li>
+      <li class="bd-links-group py-2">
+        <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold" style="border-color: var(--bs-pink);">
+          Customize
+        </strong>
+
+        <ul class="list-unstyled fw-normal pb-2 small">
+            <li><a href="/docs/customize/overview" class="bd-links-link d-inline-block rounded">Overview</a></li>
+            <li><a href="/docs/customize/sass" class="bd-links-link d-inline-block rounded">Sass</a></li>
+        </ul>
+      </li>
+      <li class="bd-links-group py-2">
+        <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold" style="border-color: var(--bs-teal);">
+          Layout
+        </strong>
+
+        <ul class="list-unstyled fw-normal pb-2 small">
+            <li><a href="/docs/layout/containers" class="bd-links-link d-inline-block rounded">Containers</a></li>
+        </ul>
+      </li>
+      <li class="bd-links-group py-2">
+        <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold" style="border-color: var(--bs-gray);">
+          Content
+        </strong>
+
+        <ul class="list-unstyled fw-normal pb-2 small">
+            <li><a href="/docs/content/tables" class="bd-links-link d-inline-block rounded">Tables</a></li>
+        </ul>
+      </li>
+      <li class="bd-links-group py-2">
+        <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold" style="border-color: var(--bs-blue);">
+          Forms
+        </strong>
+
+        <ul class="list-unstyled fw-normal pb-2 small">
+            <li><a href="/docs/forms/icon-input" class="bd-links-link d-inline-block rounded">Icon input</a></li>
+        </ul>
+      </li>
+      <li class="bd-links-group py-2">
+        <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold" style="border-color: var(--bs-cyan);">
+          Extended components
+        </strong>
+
+        <ul class="list-unstyled fw-normal pb-2 small">
+            <li><a href="/docs/extended-components/buttons" class="bd-links-link d-inline-block rounded">Buttons</a></li>
+            <li><a href="/docs/extended-components/list-group" class="bd-links-link d-inline-block rounded">List group</a></li>
+            <li><a href="/docs/extended-components/modals" class="bd-links-link d-inline-block rounded">Modals</a></li>
+            <li><a href="/docs/extended-components/navbar" class="bd-links-link d-inline-block rounded">Navbar</a></li>
+        </ul>
+      </li>
+      <li class="bd-links-group py-2">
+        <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold" style="border-color: var(--bs-orange);">
+          Components
+        </strong>
+
+        <ul class="list-unstyled fw-normal pb-2 small">
+            <li><a href="/docs/components/card-link-list" class="bd-links-link d-inline-block rounded">Card link list</a></li>
+            <li><a href="/docs/components/card-profile" class="bd-links-link d-inline-block rounded active" aria-current="page">Card profile</a></li>
+            <li><a href="/docs/components/carousel-light" class="bd-links-link d-inline-block rounded">Carousel light</a></li>
+            <li><a href="/docs/components/nav-bordered" class="bd-links-link d-inline-block rounded">Nav bordered</a></li>
+            <li><a href="/docs/components/navbar-transparent" class="bd-links-link d-inline-block rounded">Navbar transparent</a></li>
+            <li><a href="/docs/components/blocks" class="bd-links-link d-inline-block rounded">Blocks</a></li>
+            <li><a href="/docs/components/callouts" class="bd-links-link d-inline-block rounded">Callouts</a></li>
+            <li><a href="/docs/components/dashhead" class="bd-links-link d-inline-block rounded">Dashhead</a></li>
+            <li><a href="/docs/components/divided-heading" class="bd-links-link d-inline-block rounded">Divided heading</a></li>
+            <li><a href="/docs/components/featured-lists" class="bd-links-link d-inline-block rounded">Featured lists</a></li>
+            <li><a href="/docs/components/growl" class="bd-links-link d-inline-block rounded">Growl</a></li>
+            <li><a href="/docs/components/icon-lists" class="bd-links-link d-inline-block rounded">Icon lists</a></li>
+            <li><a href="/docs/components/icon-nav" class="bd-links-link d-inline-block rounded">Icon nav</a></li>
+            <li><a href="/docs/components/media-list-conversation" class="bd-links-link d-inline-block rounded">Media list conversation</a></li>
+            <li><a href="/docs/components/media-list-stream" class="bd-links-link d-inline-block rounded">Media list stream</a></li>
+            <li><a href="/docs/components/media-list-users" class="bd-links-link d-inline-block rounded">Media list users</a></li>
+            <li><a href="/docs/components/profile-header" class="bd-links-link d-inline-block rounded">Profile header</a></li>
+            <li><a href="/docs/components/pull-quotes" class="bd-links-link d-inline-block rounded">Pull quotes</a></li>
+            <li><a href="/docs/components/stat-cards" class="bd-links-link d-inline-block rounded">Stat cards</a></li>
+            <li><a href="/docs/components/text-ribbons" class="bd-links-link d-inline-block rounded">Text ribbons</a></li>
+        </ul>
+      </li>
+  </ul>
+</nav>
+
+        </div>
+      </div>
+    </aside>
+
+    <main class="bd-main order-1">
+      <div class="bd-intro pt-2 ps-lg-2">
+        <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
+          <a class="btn btn-sm btn-bd-light mb-3 mb-md-0 rounded-2" href="https://github.com/smolsoftboi/bootstrap-extensions/site/content/docs/components/card-profile.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">View on GitHub</a>
+          <h1 class="bd-title mb-0" id="content">Card profile</h1>
+        </div>
+        <p class="bd-lead">Feature a user’s profile with the card profile variant.</p>
+        
+      </div>
+
+      
+        <div class="bd-toc mt-3 mb-5 my-lg-0 ps-xl-3 mb-lg-5 text-muted">
+          <button class="btn btn-link link-dark p-md-0 mb-2 mb-md-0 text-decoration-none bd-toc-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents">
+            On this page
+            <svg class="bi d-md-none ms-2" aria-hidden="true"><use xlink:href="#chevron-expand"></use></svg>
+          </button>
+          <strong class="d-none d-md-block h6 my-2">On this page</strong>
+          <hr class="d-none d-md-block my-2">
+          <div class="collapse bd-toc-collapse" id="tocContents">
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#examples">Examples</a></li>
+    <li><a href="#css">CSS</a>
+      <ul>
+        <li><a href="#sass-variables">Sass variables</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+          </div>
+        </div>
+      
+
+      <div class="bd-content ps-lg-2">
+        
+
+        <h2 id="examples">Examples</h2>
+<div class="bd-example-snippet bd-code-snippet"><div class="bd-example bd-example-padded">
+<div class="row">
+  <div class="col-lg-6">
+    <div class="card card-profile">
+      <div class="card-header" style="background-image: url(/docs/assets/img/examples/unsplash-1.jpg);"></div>
+      <div class="card-body text-center">
+        <img class="card-profile-img" src="/docs/assets/img/examples/avatar-fat.jpg" alt="Jacob Thornton avatar">
+        <h5 class="card-title">Jacob Thornton</h5>
+        <p class="mb-4">Big belly rude boy, million dollar hustler. Unemployed.</p>
+        <button class="btn btn-outline-primary btn-sm">Follow</button>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="card card-profile">
+      <div class="card-header" style="background-image: url(/docs/assets/img/examples/unsplash-2.jpg);"></div>
+      <div class="card-body text-center">
+        <img class="card-profile-img" src="/docs/assets/img/examples/avatar-mdo.png" alt="Mark Otto avatar">
+        <h5 class="card-title">Mark Otto</h5>
+        <p class="mb-4">GitHub and Bootstrap. Formerly at Twitter. Huge nerd.</p>
+        <button class="btn btn-outline-primary btn-sm">Follow</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div><div class="d-flex align-items-center highlight-toolbar bg-light ps-3 pe-2 py-1">
+        <small class="font-monospace text-muted text-uppercase">html</small>
+      </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-lg-6&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card card-profile&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-header&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;background-image: url(/docs/assets/img/examples/unsplash-1.jpg);&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-body text-center&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">img</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-profile-img&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;/docs/assets/img/examples/avatar-fat.jpg&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;Jacob Thornton avatar&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-title&#34;</span><span class="p">&gt;</span>Jacob Thornton<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mb-4&#34;</span><span class="p">&gt;</span>Big belly rude boy, million dollar hustler. Unemployed.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-outline-primary btn-sm&#34;</span><span class="p">&gt;</span>Follow<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-lg-6&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card card-profile&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-header&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;background-image: url(/docs/assets/img/examples/unsplash-2.jpg);&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-body text-center&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">img</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-profile-img&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;/docs/assets/img/examples/avatar-mdo.png&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;Mark Otto avatar&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-title&#34;</span><span class="p">&gt;</span>Mark Otto<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mb-4&#34;</span><span class="p">&gt;</span>GitHub and Bootstrap. Formerly at Twitter. Huge nerd.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-outline-primary btn-sm&#34;</span><span class="p">&gt;</span>Follow<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+
+<h2 id="css">CSS</h2>
+<h3 id="sass-variables">Sass variables</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$card-profile-title-margin-bottom</span><span class="o">:</span> <span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.3</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$card-profile-header-height</span><span class="o">:</span>       <span class="nv">$spacer</span> <span class="o">*</span> <span class="mi">9</span><span class="mf">.4</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">$card-profile-img-width</span><span class="o">:</span>           <span class="nv">$spacer</span> <span class="o">*</span> <span class="mi">6</span><span class="mf">.3</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$card-profile-img-margin-top</span><span class="o">:</span>      <span class="nf">-</span><span class="p">(</span><span class="nv">$card-profile-header-height</span> <span class="o">*</span> <span class="mf">.5</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$card-profile-img-margin-bottom</span><span class="o">:</span>   <span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.3</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$card-profile-img-border-width</span><span class="o">:</span>    <span class="nv">$border-width</span> <span class="o">*</span> <span class="mi">3</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$card-profile-img-border-color</span><span class="o">:</span>    <span class="nv">$white</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$card-profile-img-box-shadow</span><span class="o">:</span>      <span class="mi">0</span> <span class="p">(</span><span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.1</span><span class="p">)</span> <span class="p">(</span><span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.1</span><span class="p">)</span> <span class="nf">rgba</span><span class="p">(</span><span class="nv">$black</span><span class="o">,</span> <span class="mf">.1</span><span class="p">);</span>
+</span></span></code></pre></div>
+
+      </div>
+    </main>
+  </div>
+
+
+    <footer class="bd-footer py-4 py-md-5 mt-5 bg-light">
+  <div class="container py-4 py-md-5 px-4 px-md-3">
+    <div class="row">
+      <div class="col-lg-3 mb-3">
+        <a class="d-inline-flex align-items-center mb-2 link-dark text-decoration-none" href="/" aria-label="Bootstrap">
+          <span class="fs-5">Bootstrap Extensions</span>
+        </a>
+        <ul class="list-unstyled small text-muted">
+          <li class="mb-2">Designed and built with all the love in the world by Kristian Matthews-Kennington with the help of <a href="https://github.com/smolsoftboi/bootstrap-extensions/graphs/contributors">our contributors</a>.</li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+        <h5>Links</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="/">Home</a></li>
+          <li class="mb-2"><a href="/docs">Docs</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 mb-3">
+        <h5>Guides</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="/docs/getting-started/">Getting started</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 mb-3">
+        <h5>Projects</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="https://github.com/twbs">Bootstrap</a></li>
+          <li class="mb-2"><a href="https://github.com/smolsoftboi/bootstrap-extensions">Bootstrap Extensions</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 mb-3">
+        <h5>Community</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="https://github.com/smolsoftboi/bootstrap-extensions/issues">Issues</a></li>
+          <li class="mb-2"><a href="https://github.com/smolsoftboi/bootstrap-extensions/discussions">Discussions</a></li>
+          <li class="mb-2"><a href="https://github.com/sponsors/SmolSoftBoi">Sponsors</a></li>
+          <li class="mb-2"><a href="https://stackoverflow.com/questions/tagged/bootstrap-extensions">Stack Overflow</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script src="/docs/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+
+
+    
+  <div class="position-fixed"><input type="text" tabindex="-1"></div>
+
+  </body>
+</html>
