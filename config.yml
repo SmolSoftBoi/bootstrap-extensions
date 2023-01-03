@@ -1,5 +1,9 @@
 languageCode:           "en"
 title:                  "Bootstrap Extensions"
+baseURL:                "https://smolsoftboi.github.io/bootstrap-extensions"
+canonifyURLs:           true
+relativeURLs:           true
+uglyURLs:               false
 
 security:
   enableInlineShortcodes: true
