@@ -17,8 +17,11 @@ In your `custom.scss`, you'll import Bootstrap Extension's source Sass files. Yo
 // Option A: Include all of Bootstrap Extensions
 
 // Include any default variable overrides here (though functions won't be available)
+
 @import "@smolpack/bootstrap-extensions/scss/bootstrap-extensions";
+
 // Then add additional custom code here
+
 ```
 
 ```scss
@@ -31,6 +34,7 @@ In your `custom.scss`, you'll import Bootstrap Extension's source Sass files. Yo
 
 // 3. Include remainder of required Bootstrap stylesheets
 @import "@smolpack/bootstrap-extensions/scss/variables";
+@import "@smolpack/bootstrap-extensions/scss/variables-dark";
 
 // 4. Include any default map overrides here
 
@@ -47,9 +51,10 @@ In your `custom.scss`, you'll import Bootstrap Extension's source Sass files. Yo
 @import "bootstrap/scss/containers";
 @import "bootstrap/scss/grid";
 @import "bootstrap/scss/helpers";
-// 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
 
+// 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
 @import "bootstrap/scss/utilities/api";
+
 // 8. Add additional custom code here
 
 ```

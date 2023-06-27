@@ -1,7 +1,9 @@
 // Utilities
 
+// Include required Bootstrap stylesheets
+@import "bootstrap/scss/utilities";
+
 $utilities: map-merge(
-  $utilities,
   (
     "bg-blur": (
       property: backdrop-filter,
@@ -27,5 +29,6 @@ $utilities: map-merge(
         serif: var(--#{$prefix}font-serif)
       )
     )
-  )
+  ),
+  $utilities
 );
