@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Some stylesheet is required to use these components.">
 <meta name="author" content="Kristian Matthews-Kennington, and Bootstrap contributors">
-<meta name="generator" content="Hugo 0.108.0">
+<meta name="generator" content="Hugo 0.111.3">
 
 <meta name="docsearch:language" content="en">
 
@@ -225,7 +225,9 @@
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// Option A: Include all of Bootstrap Extensions
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>
 </span></span><span class="line"><span class="cl"><span class="c1">// Include any default variable overrides here (though functions won&#39;t be available)
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;@smolpack/bootstrap-extensions/scss/bootstrap-extensions&#34;</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;@smolpack/bootstrap-extensions/scss/bootstrap-extensions&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// Then add additional custom code here
 </span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// Option B: Include parts of Bootstrap Extensions
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>
@@ -236,6 +238,7 @@
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>
 </span></span><span class="line"><span class="cl"><span class="c1">// 3. Include remainder of required Bootstrap stylesheets
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;@smolpack/bootstrap-extensions/scss/variables&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;@smolpack/bootstrap-extensions/scss/variables-dark&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// 4. Include any default map overrides here
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>
@@ -252,9 +255,10 @@
 </span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/containers&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/grid&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/helpers&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/utilities/api&#34;</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/utilities/api&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// 8. Add additional custom code here
 </span></span></span></code></pre></div><p>With that setup in place, you can begin to modify any of the Sass variables and maps in your <code>custom.scss</code>. You can also start to add parts of Bootstrap Extensions under the <code>// Optional</code> section as needed. We suggest using the full import stack from our <code>bootstrap-extensions.scss</code> file as your starting point.</p>
 <h3 id="css">CSS</h3>
