@@ -62,7 +62,7 @@
       display: flex;
       justify-content: space-around;
       opacity: 0;
-      padding: min($growl-alert-padding-start, $growl-alert-padding-end, $growl-alert-padding-y) / 2;
+      padding: min($growl-alert-padding-start, $growl-alert-padding-end, $growl-alert-padding-y) * 0.5;
       top: $growl-alert-dismissable-top;
       left: $growl-alert-dismissable-top;
       color: $growl-alert-dismissable-color;
