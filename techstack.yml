@@ -1,0 +1,301 @@
+repo_name: SmolSoftBoi/bootstrap-extensions
+report_id: b86659cb0f5d0c1dac88590cbe4bcbec
+version: 0.1
+repo_type: Public
+timestamp: '2024-01-17T01:44:25+00:00'
+requested_by: SmolSoftBoi
+provider: github
+branch: main
+detected_tools_count: 22
+tools:
+- name: JavaScript
+  description: Lightweight, interpreted, object-oriented language with first-class
+    functions
+  website_url: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source_url: https://github.com/SmolSoftBoi/bootstrap-extensions
+  detection_source: Repo Metadata
+- name: Autoprefixer
+  description: PostCSS plugin to parse CSS and add vendor prefixes to CSS rules
+  website_url: https://github.com/postcss/autoprefixer
+  open_source: false
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: CSS Pre-processors / Extensions
+  image_url: https://img.stackshare.io/service/2202/72d087642cfce6fef6f2dabec5bf49e8_400x400.png
+  detection_source_url: https://github.com/SmolSoftBoi/bootstrap-extensions/blob/main/package.json
+  detection_source: package.json
+  last_updated_by: Kristian Matthews
+  last_updated_on: 2022-10-30 15:22:13.000000000 Z
+- name: Bootstrap
+  description: Simple and flexible HTML, CSS, and JS for popular UI components and
+    interactions
+  website_url: http://getbootstrap.com/
+  version: 5.3.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Front-End Frameworks
+  image_url: https://img.stackshare.io/service/1101/C9QJ7V3X.png
+  detection_source_url: https://github.com/SmolSoftBoi/bootstrap-extensions/blob/main/yarn.lock
+  detection_source: package.json
+  last_updated_by: Kristian Matthews-Kennington
+  last_updated_on: 2023-06-30 10:42:38.000000000 Z
+- name: PostCSS
+  description: Transform CSS with JS plugins
+  website_url: https://github.com/postcss/postcss
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: CSS Pre-processors / Extensions
+  image_url: https://img.stackshare.io/service/3339/rlFcjEdI.png
+  detection_source_url: https://github.com/SmolSoftBoi/bootstrap-extensions/blob/main/package.json
+  detection_source: package.json
+  last_updated_by: Kristian Matthews
+  last_updated_on: 2022-10-30 15:22:13.000000000 Z
+- name: Sass
+  description: Syntactically Awesome Style Sheets
+  website_url: http://sass-lang.com/
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: CSS Pre-processors / Extensions
+  image_url: https://img.stackshare.io/service/1171/jCR2zNJV.png
+  detection_source_url: https://github.com/SmolSoftBoi/bootstrap-extensions/blob/main/package.json
+  detection_source: package.json
+  last_updated_by: Kristian Matthews
+  last_updated_on: 2022-10-30 15:22:13.000000000 Z
+- name: ESLint
+  description: The fully pluggable JavaScript code quality tool
+  website_url: http://eslint.org/
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Code Review
+  image_url: https://img.stackshare.io/service/3337/Q4L7Jncy.jpg
+  detection_source_url: https://github.com/SmolSoftBoi/bootstrap-extensions/blob/main/package.json
+  detection_source: package.json
+  last_updated_by: Kristian Matthews
+  last_updated_on: 2022-10-30 15:22:13.000000000 Z
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/SmolSoftBoi/bootstrap-extensions
+  detection_source: Repo Metadata
+- name: GitHub Actions
+  description: Automate your workflow from idea to production
+  website_url: https://github.com/features/actions
+  open_source: false
+  hosted_saas: true
+  category: Build, Test, Deploy
+  sub_category: Continuous Integration
+  image_url: https://img.stackshare.io/service/11563/actions.png
+  detection_source_url: https://github.com/SmolSoftBoi/bootstrap-extensions/blob/main/.github/workflows/css.yml
+  detection_source: ".github/workflows/css.yml"
+  last_updated_by: Kristian Matthews-Kennington
+  last_updated_on: 2022-11-15 11:43:34.000000000 Z
+- name: Stylelint
+  description: A mighty, modern CSS linter
+  website_url: http://stylelint.io/
+  version: 15.10.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Code Review
+  image_url: https://img.stackshare.io/service/5446/V9JsvPul_400x400.jpg
+  detection_source_url: https://github.com/SmolSoftBoi/bootstrap-extensions/blob/main/yarn.lock
+  detection_source: package.json
+  last_updated_by: dependabot[bot]
+  last_updated_on: 2023-07-07 22:03:08.000000000 Z
+- name: Yarn
+  description: A new package manager for JavaScript
+  website_url: https://yarnpkg.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Front End Package Manager
+  image_url: https://img.stackshare.io/service/5848/44mC-kJ3.jpg
+  detection_source_url: https://github.com/SmolSoftBoi/bootstrap-extensions/blob/main/yarn.lock
+  detection_source: yarn.lock
+  last_updated_by: Kristian Matthews
+  last_updated_on: 2022-10-30 15:22:13.000000000 Z
+- name: nodemon
+  description: A simple monitor script for use during development of a node.js app
+  website_url: http://nodemon.io/
+  version: 2.0.22
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Monitoring
+  sub_category: node.js Application Monitoring
+  image_url: https://img.stackshare.io/service/5577/preview.png
+  detection_source_url: https://github.com/SmolSoftBoi/bootstrap-extensions/blob/main/yarn.lock
+  detection_source: package.json
+  last_updated_by: Kristian Matthews-Kennington
+  last_updated_on: 2022-11-11 14:23:28.000000000 Z
+- name: npm
+  description: The package manager for JavaScript.
+  website_url: https://www.npmjs.com/
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Front End Package Manager
+  image_url: https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png
+  detection_source_url: https://github.com/SmolSoftBoi/bootstrap-extensions/blob/main/package.json
+  detection_source: package.json
+  last_updated_by: Kristian Matthews
+  last_updated_on: 2022-10-30 15:22:13.000000000 Z
+- name: clean-css-cli
+  description: A command-line interface to clean-css CSS optimization library
+  package_url: https://www.npmjs.com/clean-css-cli
+  version: 5.6.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/18113/image.png
+  detection_source_url: https://github.com/SmolSoftBoi/bootstrap-extensions/blob/main/yarn.lock
+  detection_source: package.json
+  last_updated_by: Kristian Matthews-Kennington
+  last_updated_on: 2022-11-11 14:23:28.000000000 Z
+- name: cross-env
+  description: Run scripts that set and use environment variables across platforms
+  package_url: https://www.npmjs.com/cross-env
+  version: 7.0.3
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15828/default_14fd11531839d935f920b6d55bd6f3528c890ad7.png
+  detection_source_url: https://github.com/SmolSoftBoi/bootstrap-extensions/blob/main/yarn.lock
+  detection_source: package.json
+  last_updated_by: Kristian Matthews-Kennington
+  last_updated_on: 2023-03-07 14:06:15.000000000 Z
+- name: eslint-config-xo
+  description: ESLint shareable config for XO
+  package_url: https://www.npmjs.com/eslint-config-xo
+  version: 0.42.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16573/default_682ffbfa52bb1873b212151cffed5d464d6efdfb.png
+  detection_source_url: https://github.com/SmolSoftBoi/bootstrap-extensions/blob/main/yarn.lock
+  detection_source: package.json
+  last_updated_by: dependabot[bot]
+  last_updated_on: 2023-07-07 22:03:08.000000000 Z
+- name: eslint-plugin-html
+  description: A ESLint plugin to lint and fix inline scripts contained in HTML files
+  package_url: https://www.npmjs.com/eslint-plugin-html
+  version: 7.1.0
+  license: ISC
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16129/default_73326c44fbfa7369fd17573edb113e5d849468bc.png
+  detection_source_url: https://github.com/SmolSoftBoi/bootstrap-extensions/blob/main/yarn.lock
+  detection_source: package.json
+  last_updated_by: dependabot[bot]
+  last_updated_on: 2023-07-07 22:03:08.000000000 Z
+- name: eslint-plugin-import
+  description: Import with sanity
+  package_url: https://www.npmjs.com/eslint-plugin-import
+  version: 2.27.5
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15806/default_98aa227f51aa9d787815ec3fd98d0ab2bfebbb91.png
+  detection_source_url: https://github.com/SmolSoftBoi/bootstrap-extensions/blob/main/yarn.lock
+  detection_source: package.json
+  last_updated_by: dependabot[bot]
+  last_updated_on: 2023-07-07 22:03:08.000000000 Z
+- name: eslint-plugin-markdown
+  description: An ESLint plugin to lint JavaScript in Markdown code fences
+  package_url: https://www.npmjs.com/eslint-plugin-markdown
+  version: 3.0.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16770/default_6e51a44775c61dcb2888547ad406a2f0cf2c344e.png
+  detection_source_url: https://github.com/SmolSoftBoi/bootstrap-extensions/blob/main/yarn.lock
+  detection_source: package.json
+  last_updated_by: dependabot[bot]
+  last_updated_on: 2023-07-07 22:03:08.000000000 Z
+- name: eslint-plugin-unicorn
+  description: Various awesome ESLint rules
+  package_url: https://www.npmjs.com/eslint-plugin-unicorn
+  version: 44.0.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16871/default_2e3ed47575edcaf407097e6171e3d4cb8681a6b3.png
+  detection_source_url: https://github.com/SmolSoftBoi/bootstrap-extensions/blob/main/yarn.lock
+  detection_source: package.json
+  last_updated_by: dependabot[bot]
+  last_updated_on: 2023-07-07 22:03:08.000000000 Z
+- name: gh-pages
+  description: Publish to a gh-pages branch on GitHub
+  package_url: https://www.npmjs.com/gh-pages
+  version: 4.0.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15967/default_732016a20524708efe7a4c77497fe9bfeea19ba6.png
+  detection_source_url: https://github.com/SmolSoftBoi/bootstrap-extensions/blob/main/yarn.lock
+  detection_source: package.json
+  last_updated_by: Kristian Matthews-Kennington
+  last_updated_on: 2023-06-30 10:42:38.000000000 Z
+- name: npm-run-all
+  description: A CLI tool to run multiple npm-scripts in parallel or sequential
+  package_url: https://www.npmjs.com/npm-run-all
+  version: 4.1.5
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15926/default_b45165a5d30e541ab11711a34a78209b3e8ed7fd.png
+  detection_source_url: https://github.com/SmolSoftBoi/bootstrap-extensions/blob/main/yarn.lock
+  detection_source: package.json
+  last_updated_by: Kristian Matthews-Kennington
+  last_updated_on: 2022-11-29 17:31:28.000000000 Z
+- name: postcss-cli
+  description: CLI for PostCSS
+  package_url: https://www.npmjs.com/postcss-cli
+  version: 10.1.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16326/default_97104dc50154593d2dde1d791400955934c9c715.png
+  detection_source_url: https://github.com/SmolSoftBoi/bootstrap-extensions/blob/main/yarn.lock
+  detection_source: package.json
+  last_updated_by: Kristian Matthews-Kennington
+  last_updated_on: 2022-11-11 14:23:28.000000000 Z
