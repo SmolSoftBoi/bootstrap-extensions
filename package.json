@@ -5,8 +5,8 @@
   "homepage": "https://smolsoftboi.github.io/bootstrap-extensions",
   "repository": "https://github.com/SmolSoftBoi/bootstrap-extensions.git",
   "author": "Kristian Matthews-Kennington <kristian@matthews-kennington.com>",
-  "sass": "scss/bootstrap-extension.scss",
-  "style": "dist/css/bootstrap-extension.css",
+  "sass": "scss/bootstrap-extensions.scss",
+  "style": "dist/css/bootstrap-extensions.css",
   "scripts": {
     "start": "npm-run-all watch docs-serve",
     "css": "npm-run-all css-compile css-prefix css-rtl css-minify",
